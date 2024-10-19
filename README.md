@@ -1,3 +1,5 @@
+{% include mermaid.html %}
+
 # OE5XRX.github.io
 
 Here is a simple flow chart:
