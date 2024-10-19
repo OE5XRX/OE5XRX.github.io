@@ -7,3 +7,11 @@ Welcome to My Home Page
 
 - Original date - {{ date }}
 - With timeago filter - {{ date | timeago }}
+
+{% mermaid %}
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+{% endmermaid %}
