@@ -9,4 +9,4 @@ plugins:
 mermaid:
   src: 'https://cdn.jsdelivr.net/npm/mermaid@11.3.0/dist/mermaid.min.js'
 
-remote_theme: benbalter/retlab
+remote_theme: pages-themes/minimal
