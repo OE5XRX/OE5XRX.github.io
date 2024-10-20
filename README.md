@@ -1,19 +1,7 @@
-{% include mermaid.html %}
-
 # OE5XRX.github.io
 
-Here is a simple flow chart:
+Dieses Repository beinhaltet den Source Code für die Webseite [oe5xrx.github.io](https://oe5xrx.github.io/).
 
-{% assign date = '2020-04-13T10:20:00Z' %}
+Der Inhalt der Webseite wird mit [Markdown](https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) in den Textfiles mit der Endung ’.md’ geschrieben.
 
-- Original date - {{ date }}
-- With timeago filter - {{ date | timeago }}
-
-
-{% mermaid %}
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-{% endmermaid %}
+Über die Datei baa.foo wird ein Menü aufgebaut über welches Sug-Seiten erzeugt werdrn können.
