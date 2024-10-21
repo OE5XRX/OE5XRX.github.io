@@ -1,0 +1,8 @@
+docs_list_title: Navigation
+docs:
+
+- title: Start
+  url: index.html
+
+- title: Test
+  url: test.html
