@@ -7,3 +7,10 @@ theme: just-the-docs
 
 mermaid:
   src: 'https://cdn.jsdelivr.net/npm/mermaid@11.3.0/dist/mermaid.min.js'
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
