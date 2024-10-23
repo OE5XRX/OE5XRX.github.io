@@ -6,7 +6,6 @@ nav_order: 99
 Impressum
 ---------
 
-
 |                       | Amateurfunkclub für Remote Stationen  |
 | --------------------- | ------------------------------------- |
 | ZVR-Zahl              | 1785648084                            |
