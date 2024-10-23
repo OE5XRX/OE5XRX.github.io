@@ -3,5 +3,21 @@
 Dieses Repository beinhaltet den Source Code für die Webseite [oe5xrx.github.io](https://oe5xrx.github.io/).
 
 Der Inhalt der Webseite wird mit [Markdown](https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) in den Textfiles mit der Endung `.md` geschrieben.
+Über Jekyll werden die Markdown Daten übersetzt in HTML Dateien welche dann von Github angezeigt werden.
 
-Über die Datei baa.foo wird ein Menü aufgebaut über welches Sub-Seiten erzeugt werden können.
+## Webseite lokal bauen und sehen
+
+Um die Webseite auf deinem PC zu testen führe folgenden Befehl auf der Konsole aus:
+
+```
+bundle install --path .bundle
+```
+
+Um nun die Webseite zu sehen, führe diesen Befehl aus:
+
+```
+bundle exec jekyll serve
+```
+
+Jetzt kannst du einen Browser deiner Wahl aufmachen und rufst diese URL auf: `http://127.0.0.1:4000`
+Dort solltest du nun die Webseite sehen. Die Webseite wird nun automatisch neu generiert wenn du eine Datei im Projekt speicherst.

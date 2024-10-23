@@ -1,20 +1,15 @@
 ---
 ---
 
-Welcome to My Home Page!
-
-This is a test
+Amateurfunkclub für Remote Stationen
 --------------
 
-{% assign date = '2020-04-13T10:20:00Z' %}
+Der Verein
 
-- Original date - {{ date }}
-- With timeago filter - {{ date | timeago }}
+- entwickelt
+- baut und
+- betreibt
 
-{% mermaid %}
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-{% endmermaid %}
+Remote Stationen für den Amateurfunk in ganz Österreich.
+
+Aktuell sind wir noch ganz am Anfang und suchen Ideen für eine modulare Amateurfunk Station welche einfach im Aufbau, bei der Wartung und bei möglichen Reparaturen sind.
