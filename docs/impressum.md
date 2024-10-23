@@ -3,8 +3,7 @@ title: Impressum
 nav_order: 99
 ---
 
-Impressum
----------
+# Impressum
 
 |                       | Amateurfunkclub für Remote Stationen  |
 | --------------------- | ------------------------------------- |
