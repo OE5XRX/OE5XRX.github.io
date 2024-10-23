@@ -5,7 +5,7 @@ nav_order: 1
 
 # Unsere Standorte
 
-Wir versuchen in ganz Österreich unsere Stationen aufzubauen.
+Unsere aktuellen Stationen:
 
 ## Gunskirchen, Wels-Land, Oberösterreich
 
