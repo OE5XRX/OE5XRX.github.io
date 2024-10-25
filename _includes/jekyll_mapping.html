@@ -1,6 +1,0 @@
-{% include jekyll_mapping_providers/openstreetmap.js %}
-{% if page.mapping %}
-<script type="text/javascript">
-  window.onload = function () { jekyllMapping.mappingInitialize({% yaml_to_json mapping %}) };
-</script>
-{% endif %}
