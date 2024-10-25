@@ -1,4 +1,4 @@
-<script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+<script src="https://www.openlayers.org/api/OpenLayers.js"></script>
 <script type="text/javascript">
 var jekyllMapping = (function () {
     'use strict';
