@@ -14,3 +14,9 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+mapping:
+  provider: openstreetmap
+  dimensions:
+    width: 750
+    height: 600

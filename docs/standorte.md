@@ -1,11 +1,21 @@
 ---
 title: Standorte
 nav_order: 1
+mapping:
+    locations:
+        - title: Gunskirchen
+          latitude: 48.130977
+          longitude: 13.942439
+        - title: Döbriach am Millstätter See
+          latitude: 46.770684
+          longitude: 13.652935
 ---
 
 # Unsere Standorte
 
-Unsere aktuellen Stationen:
+Unsere aktuellen geplanten Stationen:
+
+{% render_map %}
 
 ## Gunskirchen, Wels-Land, Oberösterreich
 
