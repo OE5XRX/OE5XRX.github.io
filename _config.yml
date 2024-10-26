@@ -1,12 +1,10 @@
 title: OE5XRX
 description: Amateurfunkclub für Remote Stationen
 
-gems: [jekyll-mermaid]
-
 theme: just-the-docs
 
 mermaid:
-  src: 'https://cdn.jsdelivr.net/npm/mermaid@11.3.0/dist/mermaid.min.js'
+  version: "11.3.0"
 
 defaults:
   -
