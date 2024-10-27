@@ -32,3 +32,25 @@ Mit einer zusätzliche Platine die zb. einen Bildschirm und Anschlüsse für Mik
 Ein Verstärker Module mit einem Mitsubishi RA08H1317M (8W), RA30H1317M1 (30W) oder RA60H1317M (60W) für 2m oder für 70cm ein RA07H4047M (7W), RA30H4047M1 (30W) oder RA55H4047M (55W) runden das Funkgerät ab.
 
 Eine grobe Übersicht der einzelnen Module soll in den nächsten Seiten gegeben werden. Details zu den Modulen kann in den jeweiligen Projekten gefunden werden.
+
+```mermaid
+block-beta
+columns 8
+Bus:8
+blockArrowId1<["&nbsp;&nbsp;&nbsp;"]>(up)
+blockArrowId2<["&nbsp;&nbsp;&nbsp;"]>(updown)
+blockArrowId3<["&nbsp;&nbsp;&nbsp;"]>(down)
+blockArrowId4<["&nbsp;&nbsp;&nbsp;"]>(updown)
+blockArrowId5<["&nbsp;&nbsp;&nbsp;"]>(updown)
+blockArrowId6<["&nbsp;&nbsp;&nbsp;"]>(down)
+blockArrowId7<["&nbsp;&nbsp;&nbsp;"]>(down)
+blockArrowId8<["&nbsp;&nbsp;&nbsp;"]>(updown)
+PSU
+CPU
+PA1
+TRX1
+TRX2
+PA2
+Aux
+Interface
+```
