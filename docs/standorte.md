@@ -9,7 +9,7 @@ Unsere aktuellen geplanten Stationen:
 
 ## OE5Xxx
 
-Diese zwei folgende Stationen verwenden das Rufzeichen OE5Xxx bzw. OE6Xxx:
+Diese zwei folgende Stationen verwenden das Rufzeichen OE5Xxx bzw. OE8Xxx:
 
 ### Gunskirchen, Wels-Land, Oberösterreich
 
