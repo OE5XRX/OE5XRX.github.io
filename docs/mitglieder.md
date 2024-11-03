@@ -28,3 +28,14 @@ Ein aktives Mitglied beteiligt sich bei der Vereinsarbeit. Durch die Arbeitsleis
 ### außerordentliche Mitglied (Gastmitglied)
 
 Ein Gastmitglied wird für die Dauer von einem Jahr aufgenommen (kann natürlich verlängert werden). Ein Gastmitglied braucht keine Arbeitsleistung erbringen, jedoch ist der Mitgliedsbeitrag höher als bei einem aktiven Mitglied. Ein Gastmitglied kann die Infrastruktur genau so benützen wie ein aktives Mitglied.
+
+## Mitgliedsbeiträge
+
+Aktuell wurde noch kein Mitgliedsbeitrag beschlossen. Dies wird dann abhängig von der Anzahl interessierten Mitgliedern, so wie die Fixkosten sein.
+
+### Fixkosten
+
+| Beschreibung | Regelmäßigkeit       | Kosten [Euro] |
+| ------------ | -------------------- |
+| Bank         | Monatlich            | 10,89 |
+| Clubstation  | Jährlich pro Station | 34,92 |
