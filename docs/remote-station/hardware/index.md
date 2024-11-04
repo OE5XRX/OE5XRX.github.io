@@ -1,6 +1,7 @@
 ---
 title: Hardware
-nav_order: 50
+nav_order: 2
+parent: Remote-Station
 ---
 
 # Hardware
