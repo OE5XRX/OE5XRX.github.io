@@ -5,6 +5,18 @@ nav_order: 3
 
 # Mitglieder
 
+## Vorstand
+
+Unser Vorstand bildet sich wie folgt:
+
+| Name              | Rufzeichen | Funktion              |
+| ----------------- | ---------- | --------------------- |
+| Peter Buchegger   | OE5BPA     | Obmann                |
+| Clemens Buchegger | OE5BUC     | Obmann Stellvertreter |
+| David Braidt      | SWL        | 1. Kassier            |
+| Alan Hauer        | OE5LAE     | 2. Kassier            |
+
+
 ## Werde Mitglied im Verein
 
 Wir suchen aktive Mitglieder die im Verein etwas bewegen wollen.
