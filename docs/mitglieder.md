@@ -50,4 +50,4 @@ Aktuell wurde noch kein Mitgliedsbeitrag beschlossen. Dies wird dann abhängig v
 | Beschreibung | Regelmäßigkeit       | Kosten [Euro] |
 | ------------ | -------------------- | ------------- |
 | Bank         | Monatlich            | 10,89         |
-| Clubstation  | Jährlich pro Station | 34,92         |
+| Clubstation  | Jährlich pro Station | ca. 22,00     |

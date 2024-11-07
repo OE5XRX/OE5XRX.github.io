@@ -23,7 +23,7 @@ Hier wäre ein modularer Aufbau empfehlenswert der ein leichtes austauschen der 
 Durch eine Bus-Platine im hinteren Bereich des Gehäuses wäre die Kommunikation der einzelnen Platinen gewährleistet.
 So ähnliche Systeme würden früher in 19-Zoll Systeme eingebaut für kompliziertere Projekte.
 
-![Aufbau eines 19-Zoll-Systems (Bild: merath metallsysteme GmbH)](/docs/hardware/19-zoll.png "Aufbau eines 19-Zoll-Systems (Bild: merath metallsysteme GmbH)")
+![Aufbau eines 19-Zoll-Systems (Bild: merath metallsysteme GmbH)](/docs/remote-station/hardware/19-zoll.png "Aufbau eines 19-Zoll-Systems (Bild: merath metallsysteme GmbH)")
 Aufbau eines 19-Zoll-Systems als Beispiel (Bild: merath metallsysteme GmbH)
 
 Für die Steuerung des neu erschaffenen Transceivers könnte ein STM32 verwendet werden. Dieser hat die nötigen Ein- und Ausgänge für die Ansteuerung der FM Module so wie die Möglichkeit USB-Devices zu "simulieren" (UART, Soundcard, etc.).
@@ -54,4 +54,12 @@ TRX2
 PA2
 Aux
 Interface
+blockArrowId9<["&nbsp;&nbsp;&nbsp;"]>(up)
+blockArrowId10<["USB"]>(updown)
+space:6
+RaspberryPi:2
+space:6
+blockArrowId13<["&nbsp;&nbsp;&nbsp;"]>(updown)
+space:7
+Modem
 ```

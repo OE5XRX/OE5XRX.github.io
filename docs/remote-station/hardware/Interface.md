@@ -26,5 +26,13 @@ TRX2
 PA2
 Aux
 Interface
+blockArrowId9<["&nbsp;&nbsp;&nbsp;"]>(up)
+blockArrowId10<["USB"]>(updown)
+space:6
+RaspberryPi:2
+space:6
+blockArrowId13<["&nbsp;&nbsp;&nbsp;"]>(updown)
+space:7
+Modem
 style Interface fill:#960,stroke:#000,stroke-width:2px
 ```

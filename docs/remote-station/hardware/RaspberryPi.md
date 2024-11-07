@@ -1,10 +1,10 @@
 ---
-title: Bus
+title: RaspberryPi
 parent: Hardware
-nav_order: 1
+nav_order: 8
 ---
 
-# Bus
+# Raspberry Pi
 
 ```mermaid
 block-beta
@@ -34,8 +34,5 @@ space:6
 blockArrowId13<["&nbsp;&nbsp;&nbsp;"]>(updown)
 space:7
 Modem
-style Bus fill:#960,stroke:#000,stroke-width:2px
+style RaspberryPi fill:#960,stroke:#000,stroke-width:2px
 ```
-
-Die Bus-Platine ist die einfachste aber wichtigste Platine in dem System. Sie verbindet die einzelnen Module miteinander und sorgt so für einen Daten Austausch so wie die Spannungsversorgung der einzelnen Module.
-Sie ist fix in das Gehäuse eingebaut, so das die anderen Module via Schienen in sie gesteckt werden können.
