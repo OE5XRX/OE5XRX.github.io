@@ -14,7 +14,7 @@ Diese zwei folgende Stationen verwenden das Rufzeichen OE5Xxx bzw. OE8Xxx:
 ### Gunskirchen, Wels-Land, Oberösterreich
 
 Unsere Station in Gunskirchen ist eine Teststation welche zum testen neuer Hard- und Software Ideen ist.
-Verbindungen in die Nordseite der Alpen sind von dort aus perfekt möglich.
+Verbindungen in die oberösterreichische Nordseite der Alpen sind von dort aus perfekt möglich.
 
 ### Döbriach am Millstätter See, Spittal an der Drau, Kärnten
 

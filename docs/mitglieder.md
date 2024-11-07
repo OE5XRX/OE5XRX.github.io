@@ -20,7 +20,7 @@ Unser Vorstand bildet sich wie folgt:
 ## Werde Mitglied im Verein
 
 Wir suchen aktive Mitglieder die im Verein etwas bewegen wollen.
-Egal ob Hardware- oder Software-Entwicklung, Standorte auskundschaften, Aufbau von neuen Stationen oder die Wartung von bereits bestehenden Stationen. Jeder wird wird dringend benötigt!
+Egal ob Hardware- oder Software-Entwicklung, Standorte auskundschaften, Aufbau von neuen Stationen oder die Wartung von bereits bestehenden Stationen. Jeder wird dringend benötigt!
 
 Melde dich jetzt bei uns!
 
@@ -39,7 +39,7 @@ Ein aktives Mitglied beteiligt sich bei der Vereinsarbeit. Durch die Arbeitsleis
 
 ### außerordentliche Mitglied (Gastmitglied)
 
-Ein Gastmitglied wird für die Dauer von einem Jahr aufgenommen (kann natürlich verlängert werden). Ein Gastmitglied braucht keine Arbeitsleistung erbringen, jedoch ist der Mitgliedsbeitrag höher als bei einem aktiven Mitglied. Ein Gastmitglied kann die Infrastruktur genau so benützen wie ein aktives Mitglied.
+Ein Gastmitglied wird für die Dauer von einem Jahr aufgenommen (kann natürlich verlängert werden). Ein Gastmitglied braucht keine Arbeitsleistung erbringen, jedoch ist der Mitgliedsbeitrag höher als bei einem aktiven Mitglied. Ein Gastmitglied kann die Infrastruktur genau so benützen wie ein aktives Mitglied. Wird keine Verlängerung angestrebt ended die Mitgliedschaft automatisch nach einem Kalenderjahr.
 
 ## Mitgliedsbeiträge
 
@@ -48,6 +48,6 @@ Aktuell wurde noch kein Mitgliedsbeitrag beschlossen. Dies wird dann abhängig v
 ### Fixkosten
 
 | Beschreibung | Regelmäßigkeit       | Kosten [Euro] |
-| ------------ | -------------------- |
-| Bank         | Monatlich            | 10,89 |
-| Clubstation  | Jährlich pro Station | 34,92 |
+| ------------ | -------------------- | ------------- |
+| Bank         | Monatlich            | 10,89         |
+| Clubstation  | Jährlich pro Station | 34,92         |
