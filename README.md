@@ -1,6 +1,6 @@
 # OE5XRX.github.io
 
-Dieses Repository beinhaltet den Source Code für die Webseite [oe5xrx.github.io](https://oe5xrx.github.io/).
+Dieses Repository beinhaltet den Source Code für die Webseite [oe5xrx.org](https://oe5xrx.org/).
 
 Der Inhalt der Webseite wird mit [Markdown](https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) in den Textfiles mit der Endung `.md` geschrieben.
 Über Jekyll werden die Markdown Daten übersetzt in HTML Dateien welche dann von Github angezeigt werden.
