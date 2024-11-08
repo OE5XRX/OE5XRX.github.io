@@ -21,10 +21,9 @@ Günstige Hand-Funkgeräte aus China können schon sehr viel, sind einfach in de
 Als letzte Möglichkeit bleibt nur der Selbstbau auf Basis von FM Modulen wie das SA818U/V.
 Hier wäre ein modularer Aufbau empfehlenswert der ein leichtes austauschen der defekten Module erleichtert.
 Durch eine Bus-Platine im hinteren Bereich des Gehäuses wäre die Kommunikation der einzelnen Platinen gewährleistet.
-So ähnliche Systeme würden früher in 19-Zoll Systeme eingebaut für kompliziertere Projekte.
+So ähnliche Systeme wurden früher in 19-Zoll Systeme eingebaut für kompliziertere Projekte.
 
-![Aufbau eines 19-Zoll-Systems (Bild: merath metallsysteme GmbH)](/docs/remote-station/hardware/19-zoll.png "Aufbau eines 19-Zoll-Systems (Bild: merath metallsysteme GmbH)")
-Aufbau eines 19-Zoll-Systems als Beispiel (Bild: merath metallsysteme GmbH)
+[Hier](https://merath.com/19-zoll-technik) findet man Beispiele für 19-Zoll Systeme.
 
 Für die Steuerung des neu erschaffenen Transceivers könnte ein STM32 verwendet werden. Dieser hat die nötigen Ein- und Ausgänge für die Ansteuerung der FM Module so wie die Möglichkeit USB-Devices zu "simulieren" (UART, Soundcard, etc.).
 
