@@ -17,4 +17,4 @@ nav_order: 99
 
 # Vereinsstatuten
 
-Unsere Vereinsstatuten kannst du dich [hier](Vereinsstatuten.pdf) ansehen.
+Unsere Vereinsstatuten kannst du dir [hier](Vereinsstatuten.pdf) ansehen.
