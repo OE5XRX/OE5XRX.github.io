@@ -51,3 +51,5 @@ Aktuell wurde noch kein Mitgliedsbeitrag beschlossen. Dies wird dann abhängig v
 | ------------ | -------------------- | ------------- |
 | Bank         | Monatlich            | 10,89         |
 | Clubstation  | Jährlich pro Station | ca. 22,00     |
+| Domain       | Jährlich             | 7,50 USD      |
+| Servers      | Monatlich            | ca. 15,00     |
