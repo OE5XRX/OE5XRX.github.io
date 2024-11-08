@@ -14,3 +14,7 @@ nav_order: 99
 | 1. Kassier            | David Braidt (SWL)                    |
 | 2. Kassier            | Alan Hauer (OE5LAE)                   |
 | E-Mail                | oe5bpa@gmail.com                      |
+
+# Vereinsstatuten
+
+Unsere Vereinsstatuten kannst du dich [hier](Vereinsstatuten.pdf) ansehen.
