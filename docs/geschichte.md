@@ -14,4 +14,5 @@ Am 23. September war es endlich so weit und der Verein "Amateurfunkclub für Rem
 Im Oktober befassten wir uns mit der Erstellung eines Vereinskontos so wie die Anmeldung zwei Standorte als Clubfunkstellen.
 Mit 7. November können die ersten zwei Standorte als Clubfunkstelle OE5XRX bzw. OE8XRX benützt werden. Mehr dazu unter [Standorte](standorte.html).
 
-Am 9. November stellt unser Obmann Peter (OE5BPA) den Verein bei der Landesverbandsitzung und Hauptversammlung des Landesverbands Oberösterreich des ÖVSVs vor. Der Beitritt des Vereines als ADLs ist uns sehr wichtig um auch den Verein für die Zukunft gesichert zu sehen.
+Am 9. November stellte unser Obmann Peter (OE5BPA) den Verein bei der Landesverbandsitzung und Hauptversammlung des "Oberösterreichischer Amateurfunkverband OAFV" vor. Der Beitritt des Vereines als ADLs ist uns sehr wichtig um auch den Verein für die Zukunft gesichert zu sehen.
+Unser neu gegründete Verein wurde einstimmig angenommen und ist seit dem der ADL525 im ÖVSV.
