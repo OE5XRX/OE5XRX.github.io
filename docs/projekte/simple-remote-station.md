@@ -9,10 +9,10 @@ parent: Projekte
 Unser erstes Projekt als Verein soll eine einfache Remote Station werden. Folgende Punkte sollte das Projekt enthalten:
 
 - keine PSU! Eine externe Stromversorgung soll verwendet werden. Um diese im Notfall auszuschalten soll ein einfacher WLan-Zwischenstecker verwendet werden. Die Stromverteilung passiert über die Bus-Platine.
-- Bus und alle Module-Platinen sind nur für einen TRX auszuführen. Somit werden keine Multiplexer oder sonstige komplizierte Bus Schaltungen benötigt.
+- Bus und alle Modul-Platinen sind nur für einen TRX auszuführen. Somit werden keine Multiplexer oder sonstige komplizierte Bus Schaltungen benötigt.
 - Die Bus Platine nimmt nur eine Mindestanzahl an Platinen auf.
 
-Somit werden diese Module von Nöten sein:
+Somit werden diese Modul von Nöten sein:
 
 - Bus Platine
 - CPU Modul
@@ -28,7 +28,7 @@ Auf der Bus Platine sollen dann diese Spannungen erzeugt werden:
 - 5V
 - 3,3V
 
-Insgesamt soll die Bus Platine Platz für 3 Module aufnehmen können.
+Insgesamt soll die Bus Platine Platz für 3 Modul aufnehmen können.
 
 ## CPU Modul
 
@@ -43,7 +43,7 @@ Das CPU Modul enthält einen STM32 als Mikroprozessor. Folgende Interfaces werde
 
 ## TRX Modul
 
-Das TRX Module beinhaltet einen SA818U. Der Ausgang des HF Modul wird durch einen Tiefpass-Filter zu einer SMA-Buchse weiter geleitet.
+Das TRX Modul beinhaltet einen SA818U. Der Ausgang des HF Modul wird durch einen Tiefpass-Filter zu einer SMA-Buchse weiter geleitet.
 Das HF Modul besitzt mehrere Ein und Ausgänge welche über einen I2C GPIO Expander angesteuert werden soll.
 Der Lautsprecher Ausgang wird an die Bus Platine weiter gereicht. Der Audio Eingang wird direkt von der Bus Platine verwendet.
 Zusätzlich braucht das HF Modul auch noch einen UART welcher vom BUS kommt.
@@ -54,7 +54,7 @@ Das Interface Modul stellt folgende Komponenten zur Verfügung:
 - OLED Display (I2C),
 - 6 Pin RJ45 Buchse für ein Handfunkmikrophon welches auch einen Lautsprecher enthält.
 
-Um die DTMF Tasten Abzufragen wird ein ADC im CPU Module benützt. Möglicherweise wäre ein günstiger ADC auch eine alternative um ADCs im CPU Module einzusparen da hier keine großen Auflösungen und Geschwindigkeiten benötigt werden.
+Um die DTMF Tasten Abzufragen wird ein ADC im CPU Modul benützt. Möglicherweise wäre ein günstiger ADC auch eine alternative um ADCs im CPU Modul einzusparen da hier keine großen Auflösungen und Geschwindigkeiten benötigt werden.
 Die restlichen Tasten und LEDs werden über einen I2C GPIO Expander abgefragt bzw. angesteuert.
 
 Das Mikrophone und der Lautsprecher sind über einen DAC bzw. ADC zu verarbeiten. Dieses befindet sich auf der CPU Platine.
