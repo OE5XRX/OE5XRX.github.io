@@ -11,6 +11,7 @@ Unser erstes Projekt als Verein soll eine einfache Remote Station werden. Folgen
 - keine PSU! Eine externe Stromversorgung soll verwendet werden. Um diese im Notfall auszuschalten soll ein einfacher WLan-Zwischenstecker verwendet werden. Die Stromverteilung passiert über die Bus-Platine.
 - Bus und alle Modul-Platinen sind nur für einen TRX auszuführen. Somit werden keine Multiplexer oder sonstige komplizierte Bus Schaltungen benötigt.
 - Die Bus Platine nimmt nur eine Mindestanzahl an Platinen auf.
+- Das Projekt muss **nicht** für Zukünftige Projekte kompatibel gehalten werden.
 
 Somit werden diese Modul von Nöten sein:
 
