@@ -95,4 +95,4 @@ Zusätzlich ist unter und über jedem Steckbereich für ein Modul ein 3,3 mm Loc
 
 Die Module werden auf einen 3D Gedruckten Rahmen befestigt. Diese werden in einen Einschubhilfe eingeführt damit das Modul richtig mit der Bus Platine verbunden wird.
 
-Die Bus Platine wird auf einen 20x20 mm Aluminium Rahmen befestigt. Auf diesen Aluminium Rahm sind auch die Einschubhilfen befestigt um einem Modul einen besseren halt zu geben.
+Die Bus Platine wird auf einen 20x20 mm Aluminium Rahmen befestigt. Auf diesen Aluminium Rahmen sind auch die Einschubhilfen befestigt um einem Modul einen besseren halt zu geben.
