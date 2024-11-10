@@ -20,7 +20,9 @@ Somit werden diese Modul von Nöten sein:
 - Interface Modul
 - Raspberry Pi / Host Computer
 
-## Bus Platine
+## Module und Platinen
+
+### Bus Platine
 
 Die Bus Platine braucht zusätzlich zu den Bus Verbindungen Eingänge für eine Spannungsversorgung: 12V.
 
@@ -31,7 +33,7 @@ Auf der Bus Platine sollen dann diese Spannungen erzeugt werden:
 
 Insgesamt soll die Bus Platine Platz für 3 Modul aufnehmen können.
 
-## CPU Modul
+### CPU Modul
 
 Das CPU Modul enthält einen STM32 als Mikroprozessor. Folgende Interfaces werden benötigt:
 - 2x ADC: Für das Mikrophone und der Tastatur des Mikrophone vom Interface Modul,
@@ -42,7 +44,7 @@ Das CPU Modul enthält einen STM32 als Mikroprozessor. Folgende Interfaces werde
 - 1x UART: Für das TRX Modul,
 - 1x I2C: Für GPIOs im TRX Modul,
 
-## TRX Modul
+### TRX Modul
 
 Das TRX Modul beinhaltet einen SA818V (2m). Der Ausgang des HF Modul wird durch einen Tiefpass-Filter zu einer SMA-Buchse weiter geleitet.
 Das HF Modul besitzt mehrere Ein und Ausgänge welche über einen I2C GPIO Expander angesteuert werden soll.
@@ -51,7 +53,7 @@ Der Lautsprecher Ausgang wird an die Bus Platine weiter gereicht. Der Audio Eing
 
 Zusätzlich braucht das HF Modul auch noch einen UART welcher vom BUS kommt.
 
-## Interface Modul
+### Interface Modul
 
 Das Interface Modul stellt folgende Komponenten zur Verfügung:
 - OLED Display (I2C),
@@ -63,6 +65,33 @@ Die restlichen Tasten und LEDs werden über einen I2C GPIO Expander abgefragt bz
 
 Das Mikrophone und der Lautsprecher sind über einen DAC bzw. ADC zu verarbeiten. Dieses befindet sich auf der CPU Platine.
 
-## Raspberry Pi / Host Computer
+### Raspberry Pi / Host Computer
 
 Der Host Computer kann ein Raspberry Pi oder eine sonstige Linux Box sein. Die Anforderungen sind minimal. Es lauft lediglich ein einfaches Python Script.
+
+
+## Design Entscheidungen
+
+### Module
+
+Die Module sollen eine Größe von 85x55 mm aufweisen. Diese ist ähnlich zu einem Raspberry Pi.
+
+Der Abstand zwischen einem Modul zum nächsten beträgt 40 mm.
+
+In allen 4 Ecken sollen 3,3 mm Löcher vorgesehen werden um die Module auf einen Träger zu befestigen.
+
+### Bus Platinen Größe
+
+Die Bus Platine kann 3 Module aufnehmen. Somit ist seine Größe nur für die Module 120x55 mm.
+
+Hinzu kommt ein Abstand nach oben und unten, so wie ein Platz für die Stromversorgung (5V und 3,3V).
+Die Stromversorgung 12V wird über eine einfache Buchse gelöst.
+
+In allen 4 Ecken sollen 3,3 mm Löcher vorgesehen werden um die Bus Platine auf dem Träger zu befestigen.
+Zusätzlich ist unter und über jedem Steckbereich für ein Modul ein 3,3 mm Loch um dieses auf dem Träger zu befestigen.
+
+## Mechanischer Aufbaue
+
+Die Module werden auf einen 3D Gedruckten Rahmen befestigt. Diese werden in einen Einschubhilfe eingeführt damit das Modul richtig mit der Bus Platine verbunden wird.
+
+Die Bus Platine wird auf einen 20x20 mm Aluminium Rahmen befestigt. Auf diesen Aluminium Rahm sind auch die Einschubhilfen befestigt um einem Modul einen besseren halt zu geben.
