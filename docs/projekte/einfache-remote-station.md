@@ -35,7 +35,7 @@ Auf der Bus Platine ist weiter ein USB Hub vorgesehen welcher die USB Schnittste
 ### TRX Modul
 
 Das TRX Modul beinhaltet einen SA818. Der Ausgang des HF Modul wird durch einen Tiefpass-Filter zu einer SMA-Buchse weiter geleitet.
-Der STM32 erzeugt alle benötigten Interfaces:
+Ein STM32 erzeugt alle benötigten Interfaces:
 - Audio Ein und Ausgang,
 - UART,
 - GPIOs.
