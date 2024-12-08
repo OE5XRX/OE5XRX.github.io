@@ -11,7 +11,7 @@ Der Verein
 
 Remote Stationen für den Amateurfunk in ganz Österreich.
 
-Aktuell sind wir noch ganz am Anfang und suchen Ideen für eine modulare Amateurfunk Station welche einfach im Aufbau, bei der Wartung und bei möglichen Reparaturen ist.
+Aktuell sind wir noch ganz am Anfang und suchen Ideen für eine modulare outdoor/indoor Amateurfunk Station welche einfach im Aufbau, bei der Wartung und bei möglichen Reparaturen ist.
 In der Zukunft möchten wir diese Stationen in ganz Österreich an guten Standorten aufbauen und betreiben.
 
 **Wir lieben Open Source!**

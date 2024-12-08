@@ -47,9 +47,9 @@ Aktuell wurde noch kein Mitgliedsbeitrag beschlossen. Dies wird dann abhängig v
 
 ### Fixkosten
 
-| Beschreibung | Regelmäßigkeit       | Kosten [Euro] |
-| ------------ | -------------------- | ------------- |
-| Bank         | Monatlich            | 10,89         |
-| Clubstation  | Jährlich pro Station | ca. 22,00     |
-| Domain       | Jährlich             | 7,50 USD      |
-| Servers      | Monatlich            | ca. 15,00     |
+| Beschreibung | Regelmäßigkeit       | Kosten         |
+| ------------ | -------------------- | -------------- |
+| Bank         | Monatlich            | 10,89 Euro     |
+| Clubstation  | Jährlich pro Station | ca. 22,00 Euro |
+| Domain       | Jährlich             | 7,50 USD       |
+| Servers      | Monatlich            | ca. 15,00 Euro |

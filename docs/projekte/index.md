@@ -9,7 +9,7 @@ Hier kannst du mehr über unsere Projekte erfahren.
 
 ## Jahr 2025
 
-Für das Jahr 2025 planen wir das Projekt [Simple Remote Station](simple-remote-station.md).
+Für das Jahr 2025 planen wir das Projekt [Einfache Remote Station](einfache-remote-station.md).
 
-Hier soll die Platinen für eine einfache Remote Station entworfen, gefertigt und gemessen werden.
+Hier soll die Platinen für eine einfache Remote Station entworfen, gefertigt und vermessen werden.
 Ein einfacher Mechanischer Aufbau für den Innenbereich runden das Projekt ab.
