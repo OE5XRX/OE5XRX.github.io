@@ -43,7 +43,13 @@ Ein Gastmitglied wird für die Dauer von einem Jahr aufgenommen (kann natürlich
 
 ## Mitgliedsbeiträge
 
-Aktuell wurde noch kein Mitgliedsbeitrag beschlossen. Dies wird dann abhängig von der Anzahl interessierten Mitgliedern, so wie die Fixkosten sein.
+Unsere Mitgliedsbeiträge sind aktuell angepasst so das unsere Fixkosten bezahlt werden können.
+Ein herabsetzen bzw. aussetzen von Erhöhungen ist in den nächsten Jahren abhängig von der Mitgliederanzahl vorgesehen.
+
+| aktives Mitglied (ordentliches Mitglied) | außerordentliche Mitglied (Gastmitglied) |
+| ---------------------------------------- | ---------------------------------------- |
+| 50 Euro                                  | 70 Euro                                  |
+
 
 ### Fixkosten
 
