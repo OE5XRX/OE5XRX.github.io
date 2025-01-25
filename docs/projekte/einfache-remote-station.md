@@ -49,7 +49,7 @@ Todo
 
 ### Module
 
-Die Module sollen eine Größe von 86.36x55.88 mm aufweisen. Diese ist ähnlich zu einem Raspberry Pi.
+Die Module sollen eine Größe von 86,36x55,88 mm aufweisen. Diese ist ähnlich zu einem Raspberry Pi.
 
 Der Abstand zwischen einem Modul zum nächsten beträgt 40 mm.
 
@@ -57,7 +57,7 @@ In allen 4 Ecken sollen 3,3 mm Löcher vorgesehen werden um die Module auf einen
 
 ### Bus Platinen Größe
 
-Die Bus Platine kann 4 Sub-Module aufnehmen so wie ein CM4 Modul. Somit ist seine Größe nur für die Module 160x86.36 mm.
+Die Bus Platine kann 4 Sub-Module aufnehmen so wie ein CM4 Modul. Somit ist seine Größe nur für die Module 160x86,36 mm.
 
 Hinzu kommt ein Abstand nach oben und unten, so wie den USB Hub.
 Die Stromversorgung 12V wird über eine einfache Buchse gelöst.
