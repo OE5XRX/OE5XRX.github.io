@@ -3,9 +3,7 @@ title: Impressum
 nav_order: 99
 ---
 
-Impressum
----------
-
+# Impressum
 
 |                       | Amateurfunkclub für Remote Stationen  |
 | --------------------- | ------------------------------------- |
@@ -16,3 +14,7 @@ Impressum
 | 1. Kassier            | David Braidt (SWL)                    |
 | 2. Kassier            | Alan Hauer (OE5LAE)                   |
 | E-Mail                | oe5bpa@gmail.com                      |
+
+# Vereinsstatuten
+
+Unsere Vereinsstatuten kannst du dir [hier](Vereinsstatuten.pdf) ansehen.
