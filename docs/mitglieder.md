@@ -22,7 +22,7 @@ Unser Vorstand bildet sich wie folgt:
 Wir suchen aktive Mitglieder die im Verein etwas bewegen wollen.
 Egal ob Hardware- oder Software-Entwicklung, Standorte auskundschaften, Aufbau von neuen Stationen oder die Wartung von bereits bestehenden Stationen. Jeder wird dringend benötigt!
 
-Melde dich jetzt bei uns!
+Ein Formular zum ausfüllen findest du weiter unten auf dieser Seite.
 
 Eine Doppelmitgliedschaft bei einem anderen Vereins des ÖVSVs wird gerne gesehen, ist jedoch nicht dringend von Nöten.
 
@@ -59,3 +59,9 @@ Ein herabsetzen bzw. aussetzen von Erhöhungen ist in den nächsten Jahren abhä
 | Clubstation  | Jährlich pro Station | ca. 22,00 Euro |
 | Domain       | Jährlich             | 7,50 USD       |
 | Servers      | Monatlich            | ca. 15,00 Euro |
+
+### Formular für eine neue Mitgliedschaft
+
+Bitte fülle das Formular aus, wir melden uns verlässlich wieder bei dir!
+
+<iframe src="https://formular.vereinsplaner.com/embed/1b0e08d1-4f26-4b39-b9c6-3a3ea465c499" style="width: 824px; height: 100%; border: none"></iframe>
