@@ -1,7 +1,7 @@
 ---
 title: Device Tester
 nav_order: 1
-parent: Platinen
+parent: Hardware
 ---
 
 # Device Tester PCB
@@ -9,8 +9,8 @@ parent: Platinen
 <table>
   <tr><th>Top</th><th>Bottom</th></tr>
   <tr>
-    <td><img src="device_test/device_test-3D_top.png?dummy={{ site.data['hash'] }}" alt="top" /></td>
-    <td><img src="device_test/device_test-3D_bottom.png?dummy={{ site.data['hash'] }}" alt="bottom" /></td>
+    <td><img src="main-3D_top.png?dummy={{ site.data['hash'] }}" alt="top" /></td>
+    <td><img src="main-3D_bottom.png?dummy={{ site.data['hash'] }}" alt="bottom" /></td>
   </tr>
 </table>
 
@@ -27,12 +27,12 @@ Es befinden sich auch Jumper auf der Platine um ein Computer Module 4 (Raspberry
 
 ## Daten
 
-- [Schaltplan](device_test/device_test-schematic.pdf)
-- [BOM](device_test/device_test-bom.html)
-- [iBOM](device_test/device_test-ibom.html)
-- [JLCPCB fabrication & stencil](device_test/JLCPCB/device_test-_JLCPCB_compress.zip)
-- [JLCPCB Bom](device_test/JLCPCB/device_test_bom_jlc.csv)
-- [JLCPCB Pick&Place](device_test/JLCPCB/device_test_cpl_jlc.csv)
+- [Schaltplan](main-schematic.pdf)
+- [BOM](main-bom.html)
+- [iBOM](main-ibom.html)
+- [JLCPCB fabrication & stencil](JLCPCB/main-_JLCPCB_compress.zip)
+- [JLCPCB Bom](JLCPCB/main_bom_jlc.csv)
+- [JLCPCB Pick&Place](JLCPCB/main_cpl_jlc.csv)
 
 ## Gefundene Probleme in v0.1
 
