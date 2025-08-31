@@ -20,5 +20,7 @@ und werde bei uns [Mitglied](docs/mitglieder) oder Spende an uns über [GoFundMe
 
 **Wir lieben Open Source!**
 
+Schau mal auf <a target="_blank" href="https://github.com/OE5XRX"><img src="https://github.githubassets.com/assets/GitHub-Logo-ee398b662d42.png" alt="Github" width="50"/></a> vorbei.
+
 ![Open_Source_Initiative](https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Open_Source_Initiative.svg/183px-Open_Source_Initiative.svg.png "Open_Source_Initiative")
 ![Open-source-hardware-logo](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Open-source-hardware-logo.svg/228px-Open-source-hardware-logo.svg.png "Open-source-hardware-logo")
