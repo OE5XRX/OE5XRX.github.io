@@ -43,8 +43,10 @@ Zu den entwickelten Platinen zählen:
 - **FMTransceiver**
   Dieses Modul bindet ein SA818-Funkmodul ein und ermöglicht einfachen FM-Betrieb auf VHF oder UHF.
 
-Mit dem 3D-Gehäuse konnte im Sommer die erste **Remote-Station** vollständig aufgebaut werden. Diese wurde im **August am DX-Camp** interessierten Kolleginnen und Kollegen vorgeführt.  
+Mit dem 3D-Gehäuse konnte im Sommer die erste **Remote-Station** vollständig aufgebaut werden. Diese wurde im **August am DX-Camp** interessierten Kolleginnen und Kollegen vorgeführt.
 Das Feedback war äußerst positiv und hat uns in unserem Weg bestärkt.
+
+Parallel dazu entwickelten einige Mitglieder unter der Leitung von **Gerhard (OE6PGM)** einen Aufbau, der ein **100 W Solarpanel** sowie eine **Box zur Unterbringung des Akkus und der Elektronik** umfasst.
 
 Allerdings fehlte zu diesem Zeitpunkt noch der gesamte **Software-Teil**, sodass die vorhandene Hardware noch nicht funktionsfähig eingesetzt werden konnte.
 
