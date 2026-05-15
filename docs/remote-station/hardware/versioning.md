@@ -37,9 +37,14 @@ flowchart LR
     Minor & Major --> Tag[gh release create] --> Build[Build + Archive + Deploy]
 ```
 
-## Versions-Label am PCB
+## Versions-Label am PCB und im Schaltplan
 
-Im KiCad-Titelblock steht der Platzhalter `<<VERSION>>`. Den ersetzt CI beim Build mit der Versionsnummer (`1.5`, ohne `v`-Prefix). Damit zeigt jedes physische PCB seine Hardware-Revision. Hat man so ein Board in der Hand, weiß man sofort, welcher Doku-Stand passt:
+Im KiCad-Titelblock steht der Platzhalter `<<VERSION>>`. CI ersetzt ihn beim Build — **mit unterschiedlichen Werten** je nachdem ob es sich um einen Schaltplan oder das PCB handelt:
+
+- **PCB-Silkscreen** → nur die Major-Version mit `v`-Prefix (`v1`). Die PCB ist innerhalb einer Major-Version baulich identisch — Minor-Bumps tauschen nur Komponenten, das Layout bleibt unverändert. Das Label am Board zeigt also die Hardware-Revision, nicht den momentanen Doku-Stand.
+- **Schaltplan-Titelblock** → die volle Versionsnummer ohne `v`-Prefix (`1.5`). Schaltpläne ändern sich pro Minor-Bump; das Rev-Feld muss feiner sein, damit man zwei PDFs unterscheiden kann.
+
+Hat man also ein PCB mit Silkscreen `v1` in der Hand, findet man den passenden Doku-Stand so:
 
 - **Aktueller Major** → kanonische Doku unter `oe5xrx.org/docs/remote-station/hardware/<repo>/`
 - **Älterer Major** → archivierte Doku unter `…/<repo>/v1/`, `…/<repo>/v0/` etc.
