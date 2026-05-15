@@ -57,9 +57,9 @@ flowchart TB
 ### Push auf `main` (Doku-only Patches)
 
 - Trigger: `push: main` Event
-- Workflow: KiBot läuft (BOM/Gerbers/Renderings werden frisch erzeugt), `<<VERSION>>`-Platzhalter im PCB-Titelblock wird mit der **letzten Release-Tag-Version** befüllt, Jekyll baut die Doku, alles wird nach `https://oe5xrx.org/docs/remote-station/hardware/<repo>/` deployed.
+- Workflow: KiBot läuft (BOM/Gerbers/Renderings werden frisch erzeugt), `<<VERSION>>`-Platzhalter im PCB- und/oder Schaltplan-Titelblock wird mit der **letzten Release-Tag-Version** befüllt, Jekyll baut die Doku, alles wird nach `https://oe5xrx.org/docs/remote-station/hardware/<repo>/` deployed.
 - **Kein** InvenTree-Update.
-- **Kein** Archive.
+- **Kein** Archive-Snapshot.
 
 > **Wichtige Annahme:** Dieser Pfad rebuildet auch dann, wenn der Push eine `.kicad_*`-Änderung enthält. Die Konvention im Repo ist, dass HW-Änderungen direkt vom Maintainer mit dem Auto-Release-Workflow nachgezogen werden — ansonsten zeigt die Live-Seite kurzzeitig den **neuen** Hardware-Stand mit dem **alten** Versions-Label aus dem Titelblock. Bewusst akzeptiert: für 5 Module mit niedriger Update-Frequenz und einem definierten Maintainer-Personenkreis ist die Reibung eines Release-Gates größer als das Risiko des kurzen Mismatches.
 
@@ -67,8 +67,8 @@ flowchart TB
 
 - Trigger: Maintainer klickt im Modul-Repo unter „Actions" auf „Auto-Release" → „Run workflow".
 - Logik:
-  1. Letzter Release-Tag wird ermittelt (`gh release list --limit 1`, gefiltert auf das `v<MAJOR>.<MINOR>`-Schema, sodass Pre-Scheme-Tags ignoriert werden).
-  2. Falls **kein** Release im Schema existiert (Erst-Bootstrap) → Workflow wird abgebrochen mit einem Hinweis. Das erste `v1.0` wird vom Maintainer manuell per `gh release create v1.0` erzeugt; danach pickt der Auto-Release-Workflow das auf.
+  1. Letzter Release-Tag wird ermittelt. Der Filter berücksichtigt nur Tags, die **dem Schema `v<MAJOR>.<MINOR>` folgen** *und* **deren MAJOR ≥ 1** ist. Pre-Scheme-Tags wie `v0.9` oder Beta-Tags fallen durch — selbst wenn sie syntaktisch passen, gelten sie als Pre-Baseline. Praktisch: das erste vom Workflow akzeptierte Release ist immer `v1.0`.
+  2. Falls **kein** Release ≥ `v1.0` existiert (Erst-Bootstrap) → Workflow wird abgebrochen mit einem Hinweis. Das erste `v1.0` wird vom Maintainer manuell per `gh release create v1.0 --generate-notes` erzeugt; danach pickt der Auto-Release-Workflow das auf.
   3. Diff vom letzten Release-Tag bis `HEAD` wird auf Dateien geprüft.
   4. Falls `*.kicad_pcb` geändert → nächster Tag wird **Major-Bump** (`v<X+1>.0`).
   5. Sonst falls `*.kicad_sch` geändert → nächster Tag wird **Minor-Bump** (`v<X>.<Y+1>`).
@@ -80,10 +80,10 @@ flowchart TB
 - Trigger: Auto-Release hat einen neuen Tag erzeugt.
 - Workflow:
   1. KiBot läuft (Production-Export).
-  2. `<<VERSION>>`-Platzhalter im PCB-Titelblock wird mit dem **neuen Release-Tag** befüllt (Tag ohne `v`-Prefix, z.B. `1.5`).
-  3. Bei **Major-Bump**: aktuelle `/HW-Module-X/`-Ordner-Inhalte werden auf `/HW-Module-X/v<old-major>/` kopiert (Archive-Snapshot), bevor der neue Stand deployed wird. Bestehende `v*/`-Archive-Unterordner werden vom Snapshot **ausgeschlossen**, sodass keine verschachtelten Archive (`v2/v1/`) entstehen. Existiert der Archive-Pfad bereits, wird das Kopieren übersprungen (Schutz vor versehentlichem Überschreiben).
-  4. InvenTree-Update für die neue BOM (non-blocking — falls InvenTree down ist, schlägt nur dieser Step fehl, der Rest geht durch).
-  5. Deploy nach `https://oe5xrx.org/docs/remote-station/hardware/<repo>/`.
+  2. `<<VERSION>>`-Platzhalter im PCB- und/oder Schaltplan-Titelblock wird mit dem **neuen Release-Tag** befüllt (Tag ohne `v`-Prefix, z.B. `1.5`).
+  3. Bei **Major-Bump**: aktuelle `/HW-Module-X/`-Ordner-Inhalte werden auf `/HW-Module-X/v<old-major>/` kopiert (Archive-Snapshot), bevor der neue Stand deployed wird. Bestehende `v*/`-Archive-Unterordner werden vom Snapshot **ausgeschlossen**, sodass keine verschachtelten Archive (`v2/v1/`) entstehen. Existiert der Archive-Pfad bereits, wird das Kopieren übersprungen (Schutz vor versehentlichem Überschreiben). Der Archive-Script ergänzt zusätzlich `nav_exclude: true` in den kopierten `*.md`-Front-Matter-Headern, damit die archivierten Seiten nicht im Just-the-docs Live-Nav als doppelte Einträge erscheinen — sie bleiben per Deep-Link erreichbar.
+  4. Deploy nach `https://oe5xrx.org/docs/remote-station/hardware/<repo>/`.
+  5. InvenTree-Update für die neue BOM **läuft als letzter Step und ist non-blocking** — falls InvenTree down ist, schlägt nur dieser Step fehl, der Rest (vor allem der Deploy) ist da schon durch. Reihenfolge bewusst so: ein InvenTree-Outage soll niemals das Release-Deploy blockieren.
 
 ## PCB-Titelblock-Versions-Injection
 
@@ -125,8 +125,10 @@ Manuelle Tag-Pushes durch Maintainer sind **nicht vorgesehen** (außer dem Erst-
 
 Notfall-Korrekturen (z.B. fehlerhaftes Release rollbacken) verlaufen manuell:
 
-1. Release **und** Git-Tag löschen: `gh release delete v2.0 --cleanup-tag` (das `--cleanup-tag`-Flag ist wichtig — sonst bleibt der Git-Tag bestehen und der Auto-Release-Workflow zählt von ihm aus weiter).
-2. Wiederherstellung der `/HW-Module-X/`-Inhalte aus `/v1/` per `git` im OE5XRX.github.io-Repo.
+1. **Voraussetzung:** Maintainer mit Repo-Admin-Rechten. Das Tag-Ruleset blockiert sonst auch maintainer-getriebene Tag-Operationen. Vor dem Rollback entweder das Tag-Ruleset unter *Settings → Rules* temporär deaktivieren, oder die eigene Identität in die `Bypass list` des Rulesets aufnehmen.
+2. Release **und** Git-Tag löschen: `gh release delete v2.0 --cleanup-tag` (das `--cleanup-tag`-Flag ist wichtig — sonst bleibt der Git-Tag bestehen und der Auto-Release-Workflow zählt von ihm aus weiter).
+3. Wiederherstellung der `/HW-Module-X/`-Inhalte aus `/v1/` per `git` im OE5XRX.github.io-Repo.
+4. Tag-Ruleset wieder aktivieren bzw. Bypass entfernen.
 
 ## Cross-Repo-Kompatibilität
 
