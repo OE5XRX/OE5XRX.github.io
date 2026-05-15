@@ -17,7 +17,7 @@ Jedes Modul verwendet **2-Level Semantic Versioning**: `v<MAJOR>.<MINOR>`. Es gi
 | ---- | --------------------- | -------- |
 | **MAJOR** (`v1.x → v2.0`) | `*.kicad_pcb` ändert sich — egal ob Re-Routing, Footprint-Tausch, Pad-Korrektur, Silkscreen-Fix oder Stecker-Pinout. Sobald sich am PCB ein Byte ändert, wird ein neuer Gerber-Satz fertigbar — also Major. | Re-Routing-Iteration, neuer Steckertyp, Pin-1-Markierung verschoben |
 | **MINOR** (`v1.0 → v1.1`) | Komponenten-Austausch ohne PCB-Layout-Änderung — `*.kicad_sch` ändert sich, `*.kicad_pcb` bleibt **byte-identisch**. BOM und Schaltplan dürfen sich ändern. | LDO durch pin-kompatiblen Ersatztyp ersetzt |
-| **kein Tag** (push:main) | Nur Dokumentation, README, Workflows, CI-Konfig — keine `.kicad_*` Änderung | Tippfehler in `doc/index.md`, neue Bringup-Schritte hinzugefügt |
+| **kein Tag** (push:main) | Nur Dokumentation, README, Workflows, CI-Konfig — keine `*.kicad_*` Änderung | Tippfehler in `doc/index.md`, neue Bringup-Schritte hinzugefügt |
 
 Die Bump-Entscheidung trifft ein **Auto-Release-Workflow** im jeweiligen Modul-Repo (per `workflow_dispatch` ausgelöst): er analysiert die Datei-Änderungen seit dem letzten Release-Tag und ermittelt den passenden Bump automatisch.
 
@@ -61,19 +61,22 @@ flowchart TB
 - **Kein** InvenTree-Update.
 - **Kein** Archive-Snapshot.
 
-> **Wichtige Annahme:** Dieser Pfad rebuildet auch dann, wenn der Push eine `.kicad_*`-Änderung enthält. Die Konvention im Repo ist, dass HW-Änderungen direkt vom Maintainer mit dem Auto-Release-Workflow nachgezogen werden — ansonsten zeigt die Live-Seite kurzzeitig den **neuen** Hardware-Stand mit dem **alten** Versions-Label aus dem Titelblock. Bewusst akzeptiert: für 5 Module mit niedriger Update-Frequenz und einem definierten Maintainer-Personenkreis ist die Reibung eines Release-Gates größer als das Risiko des kurzen Mismatches.
+> **Wichtige Annahme:** Dieser Pfad rebuildet auch dann, wenn der Push eine `*.kicad_*`-Änderung enthält. Die Konvention im Repo ist, dass HW-Änderungen direkt vom Maintainer mit dem Auto-Release-Workflow nachgezogen werden — ansonsten zeigt die Live-Seite kurzzeitig den **neuen** Hardware-Stand mit dem **alten** Versions-Label aus dem Titelblock. Bewusst akzeptiert: für 5 Module mit niedriger Update-Frequenz und einem definierten Maintainer-Personenkreis ist die Reibung eines Release-Gates größer als das Risiko des kurzen Mismatches.
 
 ### Auto-Release-Workflow (`workflow_dispatch`)
 
 - Trigger: Maintainer klickt im Modul-Repo unter *Actions* auf *Auto-Release* → *Run workflow*.
+- Voraussetzungen:
+  - **Branch:** der Workflow erzwingt explizit Checkout von `main` und bricht ab, falls er gegen einen anderen Ref gestartet wird (`workflow_dispatch` erlaubt sonst beliebige Branches via UI).
+  - **Token mit Trigger-Berechtigung:** `gh release create` muss das nachgelagerte `release: published` Event tatsächlich auslösen. Der Default `GITHUB_TOKEN` aus dem Workflow tut das **nicht** (GitHub-Sicherheitsfeature gegen Workflow-Schleifen). Der Auto-Release-Workflow nutzt daher ein dediziertes Token (PAT oder GitHub-App-Installation-Token) aus den Org-Secrets.
 - Logik:
-  1. Letzter Release-Tag wird ermittelt. Der Filter berücksichtigt nur Tags, die **dem Schema `v<MAJOR>.<MINOR>` folgen** *und* **deren MAJOR ≥ 1** ist. Pre-Scheme-Tags wie `v0.9` oder Beta-Tags fallen durch — selbst wenn sie syntaktisch passen, gelten sie als Pre-Baseline. Praktisch: das erste vom Workflow akzeptierte Release ist immer `v1.0`.
+  1. Letzter Release-Tag wird ermittelt. Der Filter berücksichtigt nur Tags, die **dem Schema `v<MAJOR>.<MINOR>` folgen** *und* **deren MAJOR ≥ 1** ist. Pre-Scheme-Tags wie `v0.9` oder Beta-Tags fallen durch — selbst wenn sie syntaktisch passen, gelten sie als Pre-Baseline. Falls ein Modul bereits Legacy-`v1.x`-Tags von vor dieser Konvention hat, müssen diese vor dem Erst-Bootstrap entweder gelöscht werden (`gh release delete <tag> --cleanup-tag`) oder der Maintainer akzeptiert, dass der Auto-Release-Workflow ab dem höchsten existierenden `v1.x` weiterzählt. *(Für die OE5XRX-Module wurde verifiziert: keine Legacy-`v1.x`-Tags vorhanden.)*
   2. Falls **kein** Release ≥ `v1.0` existiert (Erst-Bootstrap) → Workflow wird abgebrochen mit einem Hinweis. Das erste `v1.0` wird vom Maintainer manuell per `gh release create v1.0 --generate-notes` erzeugt; danach pickt der Auto-Release-Workflow das auf.
   3. Diff vom letzten Release-Tag bis `HEAD` wird auf Dateien geprüft.
   4. Falls `*.kicad_pcb` geändert → nächster Tag wird **Major-Bump** (`v<X+1>.0`).
   5. Sonst falls `*.kicad_sch` geändert → nächster Tag wird **Minor-Bump** (`v<X>.<Y+1>`).
   6. Sonst → keine Tag-Erstellung (push:main hat die Doku schon deployed).
-  7. Bei Tag-Erstellung: `gh release create` mit automatisch generierten Release-Notes.
+  7. Bei Tag-Erstellung: `gh release create` mit automatisch generierten Release-Notes (über das PAT/App-Token, damit das nachgelagerte Release-Event feuert).
 
 ### Release-Event (`release: published`)
 
@@ -81,7 +84,7 @@ flowchart TB
 - Workflow:
   1. KiBot läuft (Production-Export).
   2. `<<VERSION>>`-Platzhalter im PCB- und/oder Schaltplan-Titelblock wird mit dem **neuen Release-Tag** befüllt (Tag ohne `v`-Prefix, z.B. `1.5`).
-  3. Bei **Major-Bump**: aktuelle `/HW-Module-X/`-Ordner-Inhalte werden auf `/HW-Module-X/v<old-major>/` kopiert (Archive-Snapshot), bevor der neue Stand deployed wird. Bestehende `v*/`-Archive-Unterordner werden vom Snapshot **ausgeschlossen**, sodass keine verschachtelten Archive (`v2/v1/`) entstehen. Existiert der Archive-Pfad bereits, wird das Kopieren übersprungen (Schutz vor versehentlichem Überschreiben). Der Archive-Script ergänzt zusätzlich `nav_exclude: true` in den kopierten `*.md`-Front-Matter-Headern, damit die archivierten Seiten nicht im Just-the-docs Live-Nav als doppelte Einträge erscheinen — sie bleiben per Deep-Link erreichbar.
+  3. Bei **Major-Bump**: aktuelle `/HW-Module-X/`-Ordner-Inhalte werden auf `/HW-Module-X/v<old-major>/` kopiert (Archive-Snapshot), bevor der neue Stand deployed wird. Bestehende `v*/`-Archive-Unterordner werden vom Snapshot **ausgeschlossen**, sodass keine verschachtelten Archive (`v2/v1/`) entstehen. Existiert der Archive-Pfad bereits, wird das Kopieren übersprungen (Schutz vor versehentlichem Überschreiben). Das Archive-Script ergänzt zusätzlich `nav_exclude: true` in den kopierten `*.md`-Front-Matter-Headern, damit die archivierten Seiten nicht im Just-the-docs Live-Nav als doppelte Einträge erscheinen — sie bleiben per Deep-Link erreichbar.
   4. Deploy nach `https://oe5xrx.org/docs/remote-station/hardware/<repo>/`.
   5. InvenTree-Update für die neue BOM **läuft als letzter Step und ist non-blocking** — falls InvenTree down ist, schlägt nur dieser Step fehl, der Rest (vor allem der Deploy) ist da schon durch. Reihenfolge bewusst so: ein InvenTree-Outage soll niemals das Release-Deploy blockieren.
 
@@ -126,9 +129,10 @@ Manuelle Tag-Pushes durch Maintainer sind **nicht vorgesehen** (außer dem Erst-
 Notfall-Korrekturen (z.B. fehlerhaftes Release rollbacken) verlaufen manuell:
 
 1. **Voraussetzung:** Maintainer mit Repo-Admin-Rechten. Das Tag-Ruleset blockiert sonst auch maintainer-getriebene Tag-Operationen. Vor dem Rollback entweder das Tag-Ruleset unter *Settings → Rules* temporär deaktivieren, oder die eigene Identität in die `Bypass list` des Rulesets aufnehmen.
-2. Release **und** Git-Tag löschen: `gh release delete v2.0 --cleanup-tag` (das `--cleanup-tag`-Flag ist wichtig — sonst bleibt der Git-Tag bestehen und der Auto-Release-Workflow zählt von ihm aus weiter).
-3. Wiederherstellung der `/HW-Module-X/`-Inhalte aus `/v1/` per `git` im OE5XRX.github.io-Repo.
-4. Tag-Ruleset wieder aktivieren bzw. Bypass entfernen.
+2. **Source-Stand bereinigen:** der Commit, der den fehlerhaften Release ausgelöst hat, muss im Modul-Repo auf `main` zurückgenommen werden (`git revert <bad-sha>` und push, oder `git reset --hard <good-sha>` + force-push, je nach Situation). Wird das übersprungen, redeployed der nächste `push: main` denselben Bad State unter dem alten Versions-Label — und ein erneuter Auto-Release-Run würde wieder dieselbe defekte Version produzieren.
+3. Release **und** Git-Tag löschen: `gh release delete v2.0 --cleanup-tag` (das `--cleanup-tag`-Flag ist wichtig — sonst bleibt der Git-Tag bestehen und der Auto-Release-Workflow zählt von ihm aus weiter).
+4. Wiederherstellung der `/HW-Module-X/`-Inhalte aus `/v1/` per `git` im OE5XRX.github.io-Repo.
+5. Tag-Ruleset wieder aktivieren bzw. Bypass entfernen.
 
 ## Cross-Repo-Kompatibilität
 
@@ -162,7 +166,7 @@ Faustregeln — der Auto-Release-Workflow erkennt das alles automatisch, sie die
 
 ### Erste Releases
 
-Jedes Modul startet mit Tag `v1.0`, unabhängig davon, welche älteren Tags davor existierten (frühere Tags bleiben im Repo erhalten, werden aber nicht weiter gepflegt — der Auto-Release-Workflow filtert auf das `v<MAJOR>.<MINOR>`-Schema mit `MAJOR ≥ 1`, sodass Pre-Scheme-Tags die Versions-Berechnung nicht durcheinander bringen). Pro Modul entscheidet der Maintainer, wann das erste `v1.0` released wird — und legt diesen ersten Tag manuell an (`gh release create v1.0 --generate-notes`). Danach übernimmt der Auto-Release-Workflow.
+Jedes Modul startet mit Tag `v1.0`. Pre-Scheme-Tags im `v0.x`- oder Beta-Bereich bleiben im Repo erhalten, werden aber nicht weiter gepflegt — der Auto-Release-Workflow filtert auf `MAJOR ≥ 1` und überspringt sie. Sollte ein Modul **bereits** Legacy-`v1.x`-Tags von vor dieser Konvention haben, gibt es zwei Optionen: (a) die Legacy-Tags vor dem Bootstrap löschen (`gh release delete <tag> --cleanup-tag`), oder (b) den nächsten Tag manuell auf den nächsten freien `v<MAJOR>.<MINOR>`-Slot setzen und den Auto-Release ab da weiterzählen lassen. Für die OE5XRX-Module wurde vor Rollout verifiziert, dass keine Legacy-`v1.x`-Tags existieren. Pro Modul entscheidet der Maintainer, wann das erste `v1.0` released wird — und legt diesen ersten Tag manuell an (`gh release create v1.0 --generate-notes`). Danach übernimmt der Auto-Release-Workflow.
 
 ### Auf welcher Seite wird das jeweils sichtbar?
 
