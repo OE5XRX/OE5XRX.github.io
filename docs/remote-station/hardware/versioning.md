@@ -48,8 +48,8 @@ flowchart TB
 
     AutoCalc[Diff seit letztem Release-Tag] --> Decide{Was hat sich geändert?}
     Decide -->|"nur Doku/CI"| NoTag[Kein Release nötig<br/>push:main hat Doku schon deployed]
-    Decide -->|"*.kicad_sch geändert"| Minor[gh release create<br/>v&lt;X&gt;.&lt;Y+1&gt;]
-    Decide -->|"*.kicad_pcb geändert"| Major[gh release create<br/>v&lt;X+1&gt;.0]
+    Decide -->|"nur *.kicad_sch geändert<br/>(PCB unverändert)"| Minor[gh release create<br/>v&lt;X&gt;.&lt;Y+1&gt;]
+    Decide -->|"*.kicad_pcb geändert<br/>(unabhängig vom Schaltplan)"| Major[gh release create<br/>v&lt;X+1&gt;.0]
     Minor --> Build1
     Major --> Build1
 ```
@@ -65,7 +65,7 @@ flowchart TB
 
 ### Auto-Release-Workflow (`workflow_dispatch`)
 
-- Trigger: Maintainer klickt im Modul-Repo unter „Actions" auf „Auto-Release" → „Run workflow".
+- Trigger: Maintainer klickt im Modul-Repo unter *Actions* auf *Auto-Release* → *Run workflow*.
 - Logik:
   1. Letzter Release-Tag wird ermittelt. Der Filter berücksichtigt nur Tags, die **dem Schema `v<MAJOR>.<MINOR>` folgen** *und* **deren MAJOR ≥ 1** ist. Pre-Scheme-Tags wie `v0.9` oder Beta-Tags fallen durch — selbst wenn sie syntaktisch passen, gelten sie als Pre-Baseline. Praktisch: das erste vom Workflow akzeptierte Release ist immer `v1.0`.
   2. Falls **kein** Release ≥ `v1.0` existiert (Erst-Bootstrap) → Workflow wird abgebrochen mit einem Hinweis. Das erste `v1.0` wird vom Maintainer manuell per `gh release create v1.0 --generate-notes` erzeugt; danach pickt der Auto-Release-Workflow das auf.
@@ -85,9 +85,9 @@ flowchart TB
   4. Deploy nach `https://oe5xrx.org/docs/remote-station/hardware/<repo>/`.
   5. InvenTree-Update für die neue BOM **läuft als letzter Step und ist non-blocking** — falls InvenTree down ist, schlägt nur dieser Step fehl, der Rest (vor allem der Deploy) ist da schon durch. Reihenfolge bewusst so: ein InvenTree-Outage soll niemals das Release-Deploy blockieren.
 
-## PCB-Titelblock-Versions-Injection
+## Titelblock-Versions-Injection
 
-Jedes KiCad-Projekt enthält im Titelblock-Silkscreen den Platzhalter `<<VERSION>>` — je nach Modul im Schaltplan, im PCB oder in beidem (siehe `git grep '<<VERSION>>'` im jeweiligen Modul-Repo). Beim Build wird der Platzhalter ersetzt:
+Jedes KiCad-Projekt enthält im Titelblock den Platzhalter `<<VERSION>>` — je nach Modul im Schaltplan-Titelblock, im PCB-Titelblock (Silkscreen-Layer) oder in beidem (siehe `git grep '<<VERSION>>'` im jeweiligen Modul-Repo). Beim Build wird der Platzhalter ersetzt:
 
 | Trigger | Was wird in `<<VERSION>>` injiziert |
 | ------- | ----------------------------------- |
@@ -121,7 +121,7 @@ Regeln:
 
 ## Manuelle Releases / Tag-Pushes
 
-Manuelle Tag-Pushes durch Maintainer sind **nicht vorgesehen** (außer dem Erst-Bootstrap auf `v1.0`). Der Auto-Release-Workflow ist die einzige unterstützte Methode danach. In den Repository-Settings unter **Rules → Rulesets** sollte ein Tag-Ruleset aktiviert werden, das nur GitHub-Actions (mit entsprechender Identität) erlaubt, Tags zu pushen. *(GitHub hat die alten „Tag Protection Rules" Ende 2024 durch Rulesets ersetzt.)*
+Manuelle Tag-Pushes durch Maintainer sind **nicht vorgesehen** (außer dem Erst-Bootstrap auf `v1.0`). Der Auto-Release-Workflow ist die einzige unterstützte Methode danach. In den Repository-Settings unter **Rules → Rulesets** sollte ein Tag-Ruleset aktiviert werden, das nur GitHub-Actions (mit entsprechender Identität) erlaubt, Tags zu pushen. *(GitHub hat die alten Tag-Protection-Rules Ende 2024 durch Rulesets ersetzt.)*
 
 Notfall-Korrekturen (z.B. fehlerhaftes Release rollbacken) verlaufen manuell:
 
@@ -134,13 +134,13 @@ Notfall-Korrekturen (z.B. fehlerhaftes Release rollbacken) verlaufen manuell:
 
 Die Modul-Versionen sind **unabhängig** voneinander. PowerBoard `v1.5` und BusBoard `v2.0` haben keine implizite Kopplung — jedes Modul versioniert eigenständig.
 
-Falls eine Modul-Version eine andere Modul-Version explizit nicht mehr unterstützt, wird das **in der `doc/index.md` des Moduls** dokumentiert (z.B. *„PowerBoard v2.0 erfordert BusBoard ≥ v1.5 wegen erhöhter Stromleitfähigkeit"*). Es gibt keine zentrale Compatibility-Matrix — jedes Modul-Doc spricht für sich.
+Falls eine Modul-Version eine andere Modul-Version explizit nicht mehr unterstützt, wird das **in der `doc/index.md` des Moduls** dokumentiert (z.B. *PowerBoard v2.0 erfordert BusBoard ≥ v1.5 wegen erhöhter Stromleitfähigkeit*). Es gibt keine zentrale Compatibility-Matrix — jedes Modul-Doc spricht für sich.
 
 ## Firmware-Versionen
 
 Die STM32-Firmware im FM-Modul wird in einem **eigenen Repo** ([`FW-RemoteStation`](https://github.com/OE5XRX/FW-RemoteStation)) versioniert — ebenfalls Semver, aber **mit 3 Stellen** (`v1.2.3`), weil Firmware Patches anders behandelt als Hardware-Module.
 
-Bei Firmware-Releases, die ein bestimmtes Hardware-Modul nicht mehr unterstützen, wird das in den FM-Modul-Docs vermerkt (z.B. *„FW ≥ v2.0.0 setzt FM-Modul ≥ v1.5 voraus"*).
+Bei Firmware-Releases, die ein bestimmtes Hardware-Modul nicht mehr unterstützen, wird das in den FM-Modul-Docs vermerkt (z.B. *FW ≥ v2.0.0 setzt FM-Modul ≥ v1.5 voraus*).
 
 ## Operative Hinweise für Maintainer
 
@@ -162,7 +162,7 @@ Faustregeln — der Auto-Release-Workflow erkennt das alles automatisch, sie die
 
 ### Erste Releases
 
-Jedes Modul startet mit Tag `v1.0`, unabhängig davon welche älteren Tags davor existierten (frühere Tags bleiben im Repo erhalten, werden aber nicht weiter gepflegt — der Auto-Release-Workflow filtert auf das `v<MAJOR>.<MINOR>`-Schema, sodass Pre-Scheme-Tags die Versions-Berechnung nicht durcheinander bringen). Pro Modul entscheidet der Maintainer, wann das erste `v1.0` released wird — und legt diesen ersten Tag manuell an (`gh release create v1.0 --generate-notes`). Danach übernimmt der Auto-Release-Workflow.
+Jedes Modul startet mit Tag `v1.0`, unabhängig davon, welche älteren Tags davor existierten (frühere Tags bleiben im Repo erhalten, werden aber nicht weiter gepflegt — der Auto-Release-Workflow filtert auf das `v<MAJOR>.<MINOR>`-Schema mit `MAJOR ≥ 1`, sodass Pre-Scheme-Tags die Versions-Berechnung nicht durcheinander bringen). Pro Modul entscheidet der Maintainer, wann das erste `v1.0` released wird — und legt diesen ersten Tag manuell an (`gh release create v1.0 --generate-notes`). Danach übernimmt der Auto-Release-Workflow.
 
 ### Auf welcher Seite wird das jeweils sichtbar?
 
