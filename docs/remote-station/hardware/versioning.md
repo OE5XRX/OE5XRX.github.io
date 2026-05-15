@@ -19,11 +19,11 @@ Jedes Modul nutzt `v<MAJOR>.<MINOR>` — bewusst nur 2 Stellen, kein Patch-Level
 | **MINOR** (`v1.0 → v1.1`) | Nur `*.kicad_sch` ändert sich, PCB-Layout bleibt | LDO durch pin-kompatiblen Ersatz |
 | **kein Release** | Nur Doku, README, CI | Tippfehler in einer `index.md` |
 
-Faustregel: sobald das PCB ein neues Gerber-File produziert, ist das ein Major. Alles andere ist Minor oder „nur Doku".
+Faustregel: sobald das PCB ein neues Gerber-File produziert, ist das ein Major. Alles andere ist Minor oder *nur Doku*.
 
 ## Wie kommt ein Release zustande?
 
-1. Maintainer pusht seine Änderungen auf `main`. Jeder Push deployed automatisch die Doku samt frischer Renderings nach [oe5xrx.org/docs/remote-station/hardware/<repo>/](https://oe5xrx.org/docs/remote-station/hardware/).
+1. Maintainer pusht seine Änderungen auf `main`. Jeder Push deployed automatisch die Doku samt frischer Renderings unter `oe5xrx.org/docs/remote-station/hardware/<repo>/` — eine Übersicht aller Modul-Pages liegt auf der [Hardware-Seite](../).
 2. Will der Maintainer einen echten Release, startet er im Modul-Repo den **Auto-Release-Workflow** (per *Actions* → *Auto-Release* → *Run workflow*). Der schaut sich den Diff seit dem letzten Release an, entscheidet Major/Minor/kein Release nach der Tabelle oben und erstellt den passenden Tag plus Release-Notes.
 3. Beim neuen Release läuft KiBot, ein BOM-Sync zu InvenTree, und die fertigen Artefakte ersetzen den bisherigen Live-Stand auf der Webseite.
 
@@ -39,7 +39,7 @@ flowchart LR
 
 ## Versions-Label am PCB
 
-Im KiCad-Titelblock steht der Platzhalter `<<VERSION>>`. Den ersetzt CI beim Build mit der Versionsnummer (`1.5`, ohne `v`-Prefix). Damit zeigt jedes physische PCB seine Hardware-Revision. Hat man so ein Board in der Hand, weiß man sofort welcher Doku-Stand passt:
+Im KiCad-Titelblock steht der Platzhalter `<<VERSION>>`. Den ersetzt CI beim Build mit der Versionsnummer (`1.5`, ohne `v`-Prefix). Damit zeigt jedes physische PCB seine Hardware-Revision. Hat man so ein Board in der Hand, weiß man sofort, welcher Doku-Stand passt:
 
 - **Aktueller Major** → kanonische Doku unter `oe5xrx.org/docs/remote-station/hardware/<repo>/`
 - **Älterer Major** → archivierte Doku unter `…/<repo>/v1/`, `…/<repo>/v0/` etc.
@@ -48,7 +48,7 @@ Im KiCad-Titelblock steht der Platzhalter `<<VERSION>>`. Den ersetzt CI beim Bui
 
 Beim Major-Bump (z.B. `v1.x → v2.0`) verschiebt CI den bisherigen `/<repo>/`-Inhalt auf `/<repo>/v1/`. Danach landet der neue v2-Stand im Wurzelverzeichnis. Minor-Bumps und reine Doku-Pushes lassen die Archive in Ruhe.
 
-Konsequenz: die aktuelle Major-Version ist immer einen Klick weniger entfernt; ältere Hardware-Revisionen bleiben aber dauerhaft erreichbar — wichtig, wenn jemand ein „altes" Board aus dem Schrank holt.
+Konsequenz: die aktuelle Major-Version ist immer einen Klick weniger entfernt; ältere Hardware-Revisionen bleiben aber dauerhaft erreichbar — wichtig, wenn jemand ein *altes* Board aus dem Schrank holt.
 
 ## Cross-Repo-Kompatibilität
 
