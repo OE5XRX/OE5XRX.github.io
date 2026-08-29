@@ -10,6 +10,7 @@ _site
 /_sass/custom/
 /_includes/head_custom.html
 /_includes/nav_footer_custom.html
+/_includes/mermaid_config.js
 /assets/css/just-the-docs-oe5xrx-dark.scss
 /assets/fonts/
 /assets/oe5xrx-logo.svg
