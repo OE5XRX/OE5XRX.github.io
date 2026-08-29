@@ -34,7 +34,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Apply OE5XRX brand layer
-        uses: OE5XRX/branding/.github/actions/apply-brand@v0.2.4
+        uses: OE5XRX/branding/.github/actions/apply-brand@v0.2.5
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1 # v1.161.0
         with:
