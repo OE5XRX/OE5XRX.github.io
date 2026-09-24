@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Apply OE5XRX brand layer
         uses: OE5XRX/branding/.github/actions/apply-brand@v0.2.5
       - name: Setup Ruby
