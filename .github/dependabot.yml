@@ -11,16 +11,3 @@ updates:
     commit-message:
       prefix: "ci"
       include: "scope"
-
-  # Public site — keep Jekyll gems patched weekly.
-  - package-ecosystem: "bundler"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "04:00"
-      timezone: "Europe/Vienna"
-    open-pull-requests-limit: 3
-    commit-message:
-      prefix: "bundler"
-      include: "scope"
