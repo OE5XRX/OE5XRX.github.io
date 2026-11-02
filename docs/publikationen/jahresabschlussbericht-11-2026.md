@@ -14,7 +14,7 @@ Das zweite Vereinsjahr war unser bisher arbeitsreichstes. Wir haben jetzt **9 Mi
 
 Unser wichtigstes Ziel für 2026 ist erreicht. Die erste Remote-Station hängt in **Gunskirchen** an einer **Diamond X200** und steht ab sofort unseren Mitgliedern zum Testen zur Verfügung.
 
-Derzeit arbeitet die Station **nur auf 2 m**. Für ein zweites FM-Modul für 70 cm fehlt aktuell das Budget, obwohl die Antenne beide Bänder abdeckt.
+Derzeit arbeitet die Station **auf 2 m**. Das zweite FM-Modul für **70 cm** bauen wir noch bis Ende des Jahres, dann ist die Station auf beiden Bändern der X200 QRV.
 
 ## Hardware
 
@@ -53,7 +53,7 @@ Die Weboberfläche war im April noch für 2026/2027 angekündigt. Sie ist schon 
 
 ## Finanzen
 
-Die finanzielle Lage ist weiterhin angespannt. Mit dem neuen Mitglied und der Hilfe unserer Sponsoren konnten wir die Arbeit weiterführen. Am dringendsten brauchen wir **ein 70-cm-FM-Modul**. Dafür und für weitere Stationen sind wir auf zusätzliche Sponsoren und Förderungen angewiesen.
+Die finanzielle Lage ist weiterhin angespannt. Mit dem neuen Mitglied und der Hilfe unserer Sponsoren konnten wir die Arbeit weiterführen und auch das 70-cm-Modul finanzieren. Für weitere Stationen sind wir aber auf zusätzliche Sponsoren und Förderungen angewiesen.
 
 ## Vereinstreffen
 
@@ -62,7 +62,7 @@ Am **20. November 2026 ab 17:00 Uhr** gibt es ein **Vereinstreffen im Golden Pub
 ## Ausblick 2027
 
 - **Dauerbetrieb in Gunskirchen** und Erfahrungen im Betrieb sammeln
-- **Ein 70-cm-Modul nachrüsten**, sobald die Finanzierung steht
+- **70-cm-Betrieb** in Gunskirchen mit dem zweiten FM-Modul (Bau bis Ende 2026)
 - **1–2 weitere Remote-Stationen aufbauen**
 - **Weitere Hardware-Module entwickeln**, zum Beispiel ein LTE-Modem für Standorte ohne Festnetz- oder HAMNET-Anbindung
 - **Die Software weiter ausbauen:**
