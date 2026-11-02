@@ -35,6 +35,10 @@ Derzeit arbeitet die Station **auf 2 m**. Das zweite FM-Modul für **70 cm** bau
 - Eine Audio-Pipeline (GStreamer/Opus) mit DSP-Kette für die TX-Pegelanpassung
 - Firmware-Updates der Funkmodule direkt von der Station aus
 
+## Simulation & Tests
+
+Fast das ganze System lässt sich bei uns auch ohne echte Hardware betreiben. Eine **virtuelle Station in QEMU** läuft mit demselben Linux-Image wie die echte Station. Dazu kommen ein **simuliertes FM-Modul (SA818)** und die Zephyr-Firmware als `native_sim`. Damit können wir neue Funktionen von der Weboberfläche bis zur Firmware durchgehend testen, bevor sie auf die echte Station in Gunskirchen kommen. Den letzten Schritt auf echter Hardware übernimmt der HIL-Testplatz.
+
 ## Weboberfläche: remote.oe5xrx.org
 
 Die Weboberfläche war im April noch für 2026/2027 angekündigt. Sie ist schon unter [remote.oe5xrx.org](https://remote.oe5xrx.org) in Betrieb und bietet:
