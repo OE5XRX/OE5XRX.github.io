@@ -53,7 +53,7 @@ Die Weboberfläche war im April noch für 2026/2027 angekündigt. Sie ist schon 
 
 ## Finanzen
 
-Die finanzielle Lage ist weiterhin angespannt. Mit dem neuen Mitglied und der Hilfe unserer Sponsoren konnten wir die Arbeit weiterführen und auch das 70-cm-Modul finanzieren. Für weitere Stationen sind wir aber auf zusätzliche Sponsoren und Förderungen angewiesen.
+Die finanzielle Lage ist weiterhin angespannt. Mit dem neuen Mitglied und der Hilfe unserer Sponsoren konnten wir die Arbeit weiterführen. Für weitere Stationen sind wir aber auf zusätzliche Sponsoren und Förderungen angewiesen.
 
 ## Vereinstreffen
 
