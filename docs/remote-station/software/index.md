@@ -1,55 +1,22 @@
 ---
 title: Software
 nav_order: 2
-parent: Remote-Station
+parent: Technik
+has_children: true
 ---
 
 # Software
 
-```mermaid
-block-beta
-columns 7
-Datenbank:7
-Django:7
-blockArrowId1<["&nbsp;&nbsp;&nbsp;"]>(updown)
-blockArrowId2<["&nbsp;&nbsp;&nbsp;"]>(updown)
-blockArrowId3<["&nbsp;&nbsp;&nbsp;"]>(updown)
-blockArrowId4<["&nbsp;&nbsp;&nbsp;"]>(updown)
-space
-blockArrowId6<["&nbsp;&nbsp;&nbsp;"]>(updown)
-blockArrowId7<["&nbsp;&nbsp;&nbsp;"]>(updown)
-OE5XRX
-OE8XRX
-RemoteStation3
-RemoteStation4
-space
-User1
-User2
-```
+Die Software der Remote-Station besteht aus drei Teilen, die ineinandergreifen: dem Server mit Web-Oberfläche, dem Linux-Image für die Station und der Firmware der Funkmodule. Alle drei sind Open Source. Stand: November 2026.
 
-## Kommunikation
+## Server & Web-UI
 
-Zur Kommunikation zwischen einem Server und den Remote Stationen wird MQTT verwendet um Befehle auszutauschen. Diese Befehle können verschiedene Daten beinhalten:
+Der Server (`station-manager`, GPL-3.0) läuft unter remote.oe5xrx.org und ist die Zentrale: Er bietet Funken im Browser mit Steuerung, RX/TX-Audio und Sendesperre, Fernwartung mit Terminal, Telemetrie und Alarmen, Rollouts von Image- und Firmware-Updates sowie Single-Sign-On für Vereins-Apps. [Mehr dazu]({% link docs/remote-station/software/server.md %}).
 
-- Setzen der RX und/oder TX Frequenz,
-- Setzen von CTCSS,
-- Setzen der Ausgangsleistung,
-- etc.
+## Stations-Image
 
-Zum übertragen von Audio wird vermutlich eine sichere Websocket Verbindung zum Server aufgebaut.
+Das Image (`linux-image`, GPL-3.0) ist das Yocto-Linux auf dem CM4 der Station. Es hat A/B-Partitionen mit automatischem Rollback, ein schreibgeschütztes Root-Dateisystem und signierte Releases. Der Station-Agent ist eingebaut. [Mehr dazu]({% link docs/remote-station/software/image.md %}).
 
-## Server Software
+## Modul-Firmware
 
-Auf dem Server soll eine Applikation mit dem Framework Django (Python) implementiert werden. Django bietet eine vielzahl von bereits vorgefertigte Elemente zum aufbauen eines Webservers.
-Da Django in Python implementiert ist, kann eine einfache Verbindung zu einem MQTT-Broker implementiert werden. Auch Websockets sind bereits integriert.
-
-Die Django-Applikation soll in einem Docker Container laufen. Dies gewährleistet einfaches Testen, so wie schnelle Updates.
-
-## Remote Station's Software
-
-Auf den Remote Stationen soll eine einfache Python Anwendung laufen welches die Kommandos via MQTT erhält und dann entsprechend an die Hardware weiter gibt.
-Die Audio Verbindung wird zum Websocket Server aufgebaut wenn sie gebraucht wird.
-
-## Client Software
-
-Dank des Django Frameworks (Webanwendung) braucht auf dem Client nur ein normaler Browser laufen. Die Webanwendung sollte somit auch auf Mobile Geräte verwendbar sein.
+Die Firmware (`FW-RemoteStation`, LGPL-3.0) läuft auf dem STM32U575 des FM-Moduls unter Zephyr RTOS. Das Modul zeigt sich am USB als Verbund aus Soundkarte (UAC2), Steuer-Shell (CDC) und DFU. Updates sind signiert, laufen über MCUboot mit Rollback, und der Server verteilt sie automatisch. [Mehr dazu]({% link docs/remote-station/software/firmware.md %}).
