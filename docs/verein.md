@@ -25,6 +25,6 @@ Schreib uns an [info@oe5xrx.org](mailto:info@oe5xrx.org).
 ## Mehr über den Verein
 
 - [Geschichte](geschichte.html): von der Idee beim DX-Camp 2024 bis zur ersten Remote-Station
-- [Mitglieder](mitglieder.html): Vorstand und Mitglieder
+- [Mitglieder](mitglieder.html): Vorstand und Mitgliedschaft
 - [Vereinsstatuten](Vereinsstatuten.pdf) (PDF)
 - [Impressum](impressum.html)

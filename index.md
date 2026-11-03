@@ -12,7 +12,7 @@ Wir sind ein Verein, der offene Remote-Stationen für den Amateurfunk entwickelt
 Stand: November 2026
 
 - Unsere Station **OE5XRX Gunskirchen** ist QRV, aktuell auf 2 m.
-- Mitglieder funken über den Browser auf [remote.oe5xrx.org](https://remote.oe5xrx.org).
+- Mitglieder testen die Station im Browser auf [remote.oe5xrx.org](https://remote.oe5xrx.org); senden darf, wer die Einführungs-Schulung erledigt hat.
 - Das zweite FM-Modul für 70 cm bauen wir bis Ende 2026.
 
 ## Nächste Termine
@@ -22,10 +22,10 @@ Stand: November 2026
 
 ## Einstiege
 
-- **Mitmachen:** Infos für Mitglieder und Interessierte findest Du unter [Mitglieder](docs/mitglieder).
-- **Technik:** Wie die Remote-Station aufgebaut ist, steht unter [Remote Station](docs/remote-station/).
-- **Neuigkeiten:** Berichte und Rückblicke findest Du unter [Publikationen](docs/publikationen/).
-- **Verein:** Wer wir sind, siehst Du unter [Verein](docs/verein).
+- **Mitmachen:** Infos für Mitglieder und Interessierte findest du unter [Mitglieder](docs/mitglieder).
+- **Technik:** Wie die Remote-Station aufgebaut ist, steht unter [Technik](docs/remote-station/).
+- **Neuigkeiten:** Berichte und Rückblicke findest du unter [Publikationen](docs/publikationen/).
+- **Verein:** Wer wir sind, siehst du unter [Verein](docs/verein).
 
 Fragen? Schreib uns an [info@oe5xrx.org](mailto:info@oe5xrx.org).
 

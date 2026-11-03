@@ -35,8 +35,8 @@ Wie das abläuft, steht in der Anleitung [So funkst du über die Station]({% lin
 
 ## Standorte in Planung
 
-### Berg, Linz-Land, Oberösterreich.
+### Berg, Linz-Land, Oberösterreich
 
 Der Standort Berg ist als zweiter in OE5 geplant.
-Die bereits vorhandene Diamond X510N an einem Alinco DR735 hat sich im normalen SOTA-Chase-Betrieb bereits beweisen.
-Wie bisherige Chasses gezeigt haben, reicht die Abdeckung der Station vom Großteil Oberösterreichs über Teile von West-Niederösterreich bis hin zu "10 Punkte" Gipfel in OE6 (ab ca 2200 hm in der Steiermark).
+Die bereits vorhandene Diamond X510N an einem Alinco DR735 hat sich im normalen SOTA-Chase-Betrieb bereits bewiesen.
+Wie bisherige Chases gezeigt haben, reicht die Abdeckung der Station vom Großteil Oberösterreichs über Teile von West-Niederösterreich bis hin zu "10 Punkte" Gipfel in OE6 (ab ca. 2200 hm in der Steiermark).

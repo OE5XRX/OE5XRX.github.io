@@ -18,15 +18,15 @@ Die Hardware der Remote-Station besteht aus Modulen, die an einer gemeinsamen Bu
 
 ## Modularer Aufbau
 
-Alle Module haben 100 × 100 mm. Das sind die vorhandenen Module:
+Die Module haben 100 × 100 mm, die Bus-Platine ist mit ca. 117 × 100 mm etwas breiter. Das sind die vorhandenen Module:
 
-- **BusBoard** (ca. 117 × 100 mm): Die Bus-Platine mit einem USB-2.0-Hub. Die Module stecken über PCN10-Steckverbinder an. Der Hub übernimmt die Kommunikation zwischen den Modulen.
+- **BusBoard**: Die Bus-Platine mit einem USB-2.0-Hub. Die Module stecken über PCN10-Steckverbinder an. Der Hub übernimmt die Kommunikation zwischen den Modulen.
 - **CM4Carrier**: Trägt das Raspberry Pi Compute Module 4 und übernimmt die High-Level-Aufgaben.
 - **PowerBoard**: Erzeugt die nötigen Spannungen. Es wird mit 12 V über einen XT60-Stecker versorgt und liefert 5 V über einen Buck-Wandler. Außerdem misst es den Strom.
 - **FMTransceiver**: Das Funkmodul mit SA818V oder SA818U und einem STM32U575. Der STM32 stellt am USB eine serielle Steuer-Schnittstelle, eine Soundkarte und einen Firmware-Update-Zugang bereit.
 - **DeviceTester**: Ein Testmodul der Plattform mit USB-C-Anschluss zu einem USB-Gerät oder PC.
 
-Alle Low-Level-Module tragen einen STM32, der die Ein- und Ausgänge für ihre Aufgabe bereitstellt. Die Details zu jedem Modul findest du auf den Unterseiten.
+Das FMTransceiver-Modul trägt einen STM32, der die Ein- und Ausgänge für seine Aufgabe bereitstellt. Die Details zu jedem Modul findest du auf den Unterseiten.
 
 ```mermaid
 flowchart TB

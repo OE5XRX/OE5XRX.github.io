@@ -13,7 +13,7 @@ Diese Idee wurde auch noch nach dem Camp immer aufgegriffen und so beschlossen w
 Am 23. September war es endlich so weit und der Verein "Amateurfunkclub für Remote Stationen" war gegründet.
 
 Im Oktober befassten wir uns mit der Erstellung eines Vereinskontos so wie die Anmeldung zwei Standorte als Clubfunkstellen.
-Mit 7. November können die ersten zwei Standorte als Clubfunkstelle OE5XRX bzw. OE8XRX benützt werden. Mehr dazu unter [Standorte](standorte.html).
+Mit 7. November können die ersten zwei Standorte als Clubfunkstelle OE5XRX bzw. OE8XRX benützt werden. Mehr dazu unter [Stationen](standorte.html).
 
 Am 9. November stellte unser Obmann Peter (OE5BPA) den Verein bei der Landesverbandsitzung und Hauptversammlung des "Oberösterreichischer Amateurfunkverband OAFV" vor. Der Beitritt des Vereines als ADLs ist uns sehr wichtig um auch den Verein für die Zukunft gesichert zu sehen.
 Unser neu gegründete Verein wurde einstimmig angenommen und ist seit dem der ADL525 im ÖVSV.
@@ -26,7 +26,7 @@ In der QSP erschienen zwei Artikel über den Verein: im April über die Gründun
 
 ## 2026
 
-Anfang 2026 zeigte sich, dass das FM-Modul wegen Problemen mit der USB-Anbindung des STM32F3 überarbeitet werden muss. Wir sind deshalb auf den STM32U575 umgestiegen. Parallel entstanden ein Debug-Board und ein Testplatz für automatische Hardware-in-the-Loop-Tests der Firmware.
+Anfang 2026 zeigte sich, dass das FM-Modul wegen Problemen mit der USB-Anbindung des STM32F3 überarbeitet werden muss. Wir sind deshalb auf den STM32U575 umgestiegen. Im Laufe des Jahres begannen wir außerdem mit einem Debug-Board und bauten einen automatischen Testplatz für die Firmware auf (seit September im Einsatz).
 
 Beim DX-Camp in Döbriach im Juli (17. bis 26. Juli) konnten wir die Station bereits über die Weboberfläche steuern, noch ohne Audio. Funken im Browser mit Audio kam im Herbst 2026 dazu.
 

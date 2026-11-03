@@ -21,7 +21,7 @@
 - Öffentlicher Kontakt: `info@oe5xrx.org`. Das Impressum bleibt inhaltlich unverändert.
 - Keine IPs, keine internen Hostnamen, keine Seriennummern. Öffentliche Hosts sind nur `remote.oe5xrx.org` und `oe5xrx.org`.
 - Fakten nur aus den Quellen der Spec (Code `origin/main`, Publikationen, Project 3). Was nicht belegt ist, weglassen.
-- Die Repos liegen lokal unter `/home/pbuchegger/OE5XRX/<repo>`, gelesen wird von `origin/main` (`git -C <repo> show origin/main:<pfad>`).
+- Die Repos liegen lokal unter `<workspace>/<repo>`, gelesen wird von `origin/main` (`git -C <repo> show origin/main:<pfad>`).
 - Commit-Footer: `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`
 
 ## Verifikation (in jedem Task)

@@ -10,7 +10,7 @@ parent: Projekte
 
 ## Ziel
 
-Beim DX-Camp in Döbriach sollte eine Remote-Station über das Web bedienbar sein. Das Minimalziel (MVP) war ein einzelnes FM-Modul für 2 m, das du über die Weboberfläche steuerst.
+Beim DX-Camp in Döbriach sollte eine Remote-Station über das Web bedienbar sein. Das Minimalziel (MVP) war ein einzelnes FM-Modul für 2 m, das sich über die Weboberfläche steuern lässt.
 
 ## Ergebnis
 

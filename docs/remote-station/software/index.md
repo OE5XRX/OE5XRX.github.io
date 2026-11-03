@@ -7,7 +7,7 @@ has_children: true
 
 # Software
 
-Die Software der Remote-Station besteht aus drei Teilen, die ineinandergreifen: dem Server mit Web-Oberfläche, dem Linux-Image für die Station und der Firmware der Funkmodule. Alle drei sind Open Source. Stand: November 2026.
+Die Software der Remote-Station besteht aus drei Teilen, die ineinandergreifen: dem Server mit Weboberfläche, dem Linux-Image für die Station und der Firmware der Funkmodule. Alle drei sind Open Source. Stand: November 2026.
 
 ## Server & Web-UI
 

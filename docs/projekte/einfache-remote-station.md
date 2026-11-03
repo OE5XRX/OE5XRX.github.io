@@ -10,7 +10,7 @@ parent: Projekte
 
 Unser erstes Projekt als Verein sollte eine einfache Remote Station werden. Folgende Punkte sollte das Projekt enthalten:
 
-- Keine eigene PSU. Eine externe Stromversorgung wird verwendet, die sich im Notfall über einen einfachen WLAN-Zwischenstecker ausschalten lässt. Die Stromverteilung übernimmt die Bus-Platine.
+- Keine eigene PSU. Eine externe Stromversorgung wird verwendet, die sich im Notfall über einen einfachen WLAN-Zwischenstecker ausschalten lässt. Die Stromverteilung übernimmt die Bus-Platine. Im Ergebnis erzeugt das PowerBoard die 5 V aus externen 12 V; die Bus-Platine verteilt sie.
 - Die Bus-Platine nimmt nur eine minimale Anzahl an Modulen auf.
 
 ## Module und Platinen
@@ -19,7 +19,7 @@ Geplant waren eine Bus-Platine, ein CM4-Modul und zwei Funkmodule (2 m und 70 cm
 
 - **BusBoard:** die Bus-Platine
 - **PowerBoard:** Stromversorgung
-- **CM4Carrier:** Träger für den Raspberry Pi CM4
+- **CM4Carrier:** Träger für das Raspberry Pi CM4
 - **FMTransceiver:** FM-Funkmodul
 - **DeviceTester:** Test- und Bring-up-Board
 
@@ -42,6 +42,7 @@ Das Funkmodul enthält einen SA818 (SA818V für 2 m oder SA818U für 70 cm). Der
 - Audio Ein- und Ausgang
 - UART
 - GPIOs
+- USB (Steuerung, Audio, Firmware-Update)
 
 Ursprünglich war ein STM32F3 vorgesehen. Wir haben ihn wegen USB-Problemen durch den STM32U575 ersetzt.
 

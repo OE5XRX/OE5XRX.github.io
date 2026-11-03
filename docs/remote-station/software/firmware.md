@@ -11,13 +11,13 @@ Repo: [OE5XRX/FW-RemoteStation](https://github.com/OE5XRX/FW-RemoteStation), Liz
 
 ## Was sie tut
 
-Die Firmware läuft auf dem STM32U575 des FM-Moduls und macht aus dem SA818 ein USB-Gerät, das der CM4 steuern und hören kann.
+Die Firmware läuft auf dem STM32U575 des FM-Moduls und macht aus dem SA818 ein USB-Gerät, das sich vom CM4 steuern und abhören lässt.
 
 ## Wie es funktioniert
 
 Die Firmware basiert auf Zephyr RTOS und ist in C++20 geschrieben. Das Modul meldet sich am USB als Verbund aus drei Funktionen:
 
-- **Steuer-Shell (CDC-ACM):** Über sie wird das Modul bedient. Das Modul beschreibt dabei selbst, was es kann. Daraus erzeugt die Web-Oberfläche ihre Bedienelemente. Die Beschreibung enthält auch Chip-ID, Firmware-Version und Variante.
+- **Steuer-Shell (CDC-ACM):** Über sie wird das Modul bedient. Das Modul beschreibt dabei selbst, was es kann. Daraus erzeugt die Weboberfläche ihre Bedienelemente. Die Beschreibung enthält auch Chip-ID, Firmware-Version und Variante.
 - **Audio (UAC2):** Vollduplex bei 8 kHz, für Empfang und Senden.
 - **DFU:** Zugang für Firmware-Updates.
 

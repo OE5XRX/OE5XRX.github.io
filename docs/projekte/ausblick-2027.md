@@ -23,7 +23,7 @@ Für weitere Stationen sind wir auf zusätzliche Sponsoren und Förderungen ange
 
 ## Ideen
 
-Aus dem [QSP 10/2025](../publikationen/qsp-10-2025) stammen weitere Modulideen. Sie sind noch nicht geplant:
+Aus dem [QSP 10/2025](../publikationen/qsp-10-2025) stammen weitere Modulideen. Sie sind bisher nur Ideen, ohne Zeitplan:
 
 - Antennenumschalter
 - HF-Verstärker
