@@ -1,26 +1,41 @@
 ---
+title: Start
+nav_order: 1
 ---
 
 # Amateurfunkclub für Remote Stationen
 
-Der Verein
+Wir sind ein Verein, der offene Remote-Stationen für den Amateurfunk entwickelt, baut und betreibt. Gefunkt wird im Browser.
 
-- entwickelt,
-- baut und
-- betreibt
+## Was läuft gerade
 
-Remote Stationen für den Amateurfunk in ganz Österreich.
+Stand: November 2026
 
-Aktuell sind wir noch ganz am Anfang und suchen Ideen für eine modulare outdoor/indoor Amateurfunk Station welche einfach im Aufbau, bei der Wartung und bei möglichen Reparaturen ist.
-In der Zukunft möchten wir diese Stationen in ganz Österreich an guten Standorten aufbauen und betreiben.
+- Unsere Station **OE5XRX Gunskirchen** ist QRV, aktuell auf 2 m.
+- Mitglieder funken über den Browser auf [remote.oe5xrx.org](https://remote.oe5xrx.org).
+- Das Modul für 70 cm ist in Arbeit und finanziert.
 
-### Unterstütze uns
+## Nächste Termine
 
-und werde bei uns [Mitglied](docs/mitglieder) oder Spende an uns über [GoFundMe](https://gofund.me/9dd9fa90).
+<script type="module" src="https://web-widgets.vereinsplaner.com/v1/vp-event-widget"></script>
+<vp-event-widget widget-id="01a1a0d6-b4d1-7046-aa07-4ffa67ac21f0" variant="styled" theme="auto"></vp-event-widget>
 
-**Wir lieben Open Source!**
+## Einstiege
 
-Schau mal auf <a target="_blank" href="https://github.com/OE5XRX"><img src="https://github.githubassets.com/assets/GitHub-Logo-ee398b662d42.png" alt="Github" width="50"/></a> vorbei.
+- **Mitmachen:** Infos für Mitglieder und Interessierte findest Du unter [Mitglieder](docs/mitglieder).
+- **Technik:** Wie die Remote-Station aufgebaut ist, steht unter [Remote Station](docs/remote-station/).
+- **Neuigkeiten:** Berichte und Rückblicke findest Du unter [Publikationen](docs/publikationen/).
+- **Verein:** Wer wir sind, siehst Du unter [Verein](docs/verein).
 
-![Open_Source_Initiative](https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Open_Source_Initiative.svg/183px-Open_Source_Initiative.svg.png "Open_Source_Initiative")
-![Open-source-hardware-logo](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Open-source-hardware-logo.svg/228px-Open-source-hardware-logo.svg.png "Open-source-hardware-logo")
+Fragen? Schreib uns an [info@oe5xrx.org](mailto:info@oe5xrx.org).
+
+## Unterstütze uns
+
+Werde bei uns [Mitglied](docs/mitglieder) oder spende an uns über [GoFundMe](https://gofund.me/9dd9fa90).
+
+## Wir lieben Open Source!
+
+Schau mal auf <a target="_blank" href="https://github.com/OE5XRX"><img src="{{ '/assets/img/github-logo.png' | relative_url }}" alt="GitHub" width="50"/></a> vorbei.
+
+<img src="{{ '/assets/img/osi-logo.svg' | relative_url }}" alt="Open Source Initiative" title="Open Source Initiative" width="183"/>
+<img src="{{ '/assets/img/oshw-logo.svg' | relative_url }}" alt="Open Source Hardware" title="Open Source Hardware" width="228"/>
