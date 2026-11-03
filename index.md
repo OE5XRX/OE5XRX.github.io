@@ -13,7 +13,7 @@ Stand: November 2026
 
 - Unsere Station **OE5XRX Gunskirchen** ist QRV, aktuell auf 2 m.
 - Mitglieder funken über den Browser auf [remote.oe5xrx.org](https://remote.oe5xrx.org).
-- Das Modul für 70 cm ist in Arbeit und finanziert.
+- Das zweite FM-Modul für 70 cm bauen wir bis Ende 2026.
 
 ## Nächste Termine
 
