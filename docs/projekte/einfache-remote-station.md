@@ -1,72 +1,67 @@
 ---
-title: Einfache-Remote-Station
-nav_order: 1
+title: Einfache Remote Station 2025
+nav_order: 3
 parent: Projekte
 ---
 
-# Einfache Remote Station
+# Einfache Remote Station 2025
 
-Unser erstes Projekt als Verein soll eine einfache Remote Station werden. Folgende Punkte sollte das Projekt enthalten:
+> **Abgeschlossen.** Diese Seite war ursprünglich der Plan für 2025 und zeigt jetzt Plan und Ergebnis. Die Platinen sind entworfen, gefertigt und vermessen. Die Station in ihrer heutigen Form beschreibt die [Technik](../remote-station/).
 
-- keine PSU! Eine externe Stromversorgung soll verwendet werden. Um diese im Notfall auszuschalten soll ein einfacher WLan-Zwischenstecker verwendet werden. Die Stromverteilung wird über die Bus-Platine erfolgen.
-- Die Bus Platine nimmt nur eine minimale Anzahl an Modulen auf.
+Unser erstes Projekt als Verein sollte eine einfache Remote Station werden. Folgende Punkte sollte das Projekt enthalten:
 
-Somit werden diese Modul von Nöten sein:
-
-- Bus Platine
-- CM4 (Raspberry Pi) Modul
-- TRX Modul (2m)
-- TRX Modul (70cm)
-- Interface Modul
+- Keine eigene PSU. Eine externe Stromversorgung wird verwendet, die sich im Notfall über einen einfachen WLAN-Zwischenstecker ausschalten lässt. Die Stromverteilung übernimmt die Bus-Platine. Im Ergebnis erzeugt das PowerBoard die 5 V aus externen 12 V; die Bus-Platine verteilt sie.
+- Die Bus-Platine nimmt nur eine minimale Anzahl an Modulen auf.
 
 ## Module und Platinen
 
-### CM4 (Raspberry Pi) Modul
+Geplant waren eine Bus-Platine, ein CM4-Modul und zwei Funkmodule (2 m und 70 cm). Als Ergebnis gibt es diese Platinen:
 
-Das CM4 Modul enthält ein CM4 Modul (Raspberry Pi) auf welchem ein Linux Betriebssystem läuft. Das USB Interface wird an die Bus Platine weiter geleitet.
+- **BusBoard:** die Bus-Platine
+- **PowerBoard:** Stromversorgung
+- **CM4Carrier:** Träger für das Raspberry Pi CM4
+- **FMTransceiver:** FM-Funkmodul
+- **DeviceTester:** Test- und Bring-up-Board
 
-### Bus Platine
+### CM4Carrier
 
-Die Stromversorgung wird über die Bus Platine bewerkstelligt. Als Eingangsspannung sind 12V vorgesehen.
+Der CM4Carrier trägt ein Raspberry Pi CM4, auf dem ein Linux-Betriebssystem läuft. Das USB-Interface wird an die Bus-Platine weitergeleitet.
 
-Insgesamt soll die Bus Platine Platz für 4 Sub-Modul aufnehmen können. Zusätzlich kommt das CM4 Modul hinzu.
-Auf der Bus Platine ist weiter ein USB Hub vorgesehen welcher die USB Schnittstelle vom CM4 weiter leitet an die verschiedenen Module.
+### BusBoard
 
-### TRX Modul
+Die Bus-Platine verbindet die Module über PCN10-Steckverbinder. Sie ist ca. 117×100 mm groß und enthält einen USB-2.0-Hub, der die USB-Schnittstelle des CM4 an die Module weiterleitet.
 
-Das TRX Modul beinhaltet einen SA818. Der Ausgang des HF Modul wird durch einen Tiefpass-Filter zu einer SMA-Buchse weiter geleitet.
-Ein STM32 erzeugt alle benötigten Interfaces:
-- Audio Ein und Ausgang,
-- UART,
-- GPIOs.
+### PowerBoard
 
-### Interface Modul
+Das PowerBoard wird mit 12 V über einen XT60-Stecker versorgt und ist mit 3 A abgesichert. Ein 5-V-Buck-Wandler erzeugt die 5 V für die Module, zwei INA226 messen den Strom.
 
-Todo
+### FMTransceiver
 
+Das Funkmodul enthält einen SA818 (SA818V für 2 m oder SA818U für 70 cm). Der Ausgang des HF-Moduls führt über einen Tiefpassfilter zu einer SMA-Buchse. Ein STM32U575 stellt alle benötigten Schnittstellen bereit:
 
-## Design Entscheidungen
+- Audio Ein- und Ausgang
+- UART
+- GPIOs
+- USB (Steuerung, Audio, Firmware-Update)
+
+Ursprünglich war ein STM32F3 vorgesehen. Wir haben ihn wegen USB-Problemen durch den STM32U575 ersetzt.
+
+### DeviceTester
+
+Der DeviceTester ist ein Board zum Testen und für die Inbetriebnahme (Bring-up) der anderen Module.
+
+## Design-Entscheidungen
 
 ### Module
 
-Die Module sollen eine Größe von 86,36x55,88 mm aufweisen. Diese ist ähnlich zu einem Raspberry Pi.
+Die Module haben eine Größe von 100×100 mm.
 
-Der Abstand zwischen einem Modul zum nächsten beträgt 40 mm.
+In allen 4 Ecken sind 3,3-mm-Löcher vorgesehen, mit denen die Module auf einem Träger befestigt werden.
 
-In allen 4 Ecken sollen 3,3 mm Löcher vorgesehen werden um die Module auf einen Träger zu befestigen.
+### Größe der Bus-Platine
 
-### Bus Platinen Größe
+Die Bus-Platine ist ca. 117×100 mm groß.
 
-Die Bus Platine kann 4 Sub-Module aufnehmen so wie ein CM4 Modul. Somit ist seine Größe nur für die Module 160x86,36 mm.
+## Mechanischer Aufbau
 
-Hinzu kommt ein Abstand nach oben und unten, so wie den USB Hub.
-Die Stromversorgung 12V wird über eine einfache Buchse gelöst.
-
-In allen 4 Ecken sollen 3,3 mm Löcher vorgesehen werden um die Bus Platine auf dem Träger zu befestigen.
-Zusätzlich ist unter und über jedem Steckbereich für ein Modul ein 3,3 mm Loch um dieses auf dem Träger zu befestigen.
-
-## Mechanischer Aufbaue
-
-Die Module werden auf einen 3D Gedruckten Rahmen befestigt. Diese werden in einen Einschubhilfe eingeführt damit das Modul richtig mit der Bus Platine verbunden wird.
-
-Die Bus Platine wird auf einen 20x20 mm Aluminium Rahmen befestigt. Auf diesen Aluminium Rahmen sind auch die Einschubhilfen befestigt um einem Modul einen besseren halt zu geben.
+Die Module und die Bus-Platine sitzen in einem 3D-gedruckten Gehäuse. Einschubhilfen sorgen dafür, dass die Module richtig mit der Bus-Platine verbunden werden.

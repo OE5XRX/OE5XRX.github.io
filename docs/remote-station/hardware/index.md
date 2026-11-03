@@ -1,47 +1,32 @@
 ---
 title: Hardware
 nav_order: 1
-parent: Remote-Station
+parent: Technik
 ---
 
 # Hardware
 
-In diesem Kapitel sollen verschiedene Möglichkeiten erörtert werden.
+Die Hardware der Remote-Station besteht aus Modulen, die an einer gemeinsamen Bus-Platine stecken. Warum wir sie selbst bauen, zeigt der Blick auf die Alternativen. Stand: November 2026.
 
-## Teure Funkgeräte
+## Warum Selbstbau?
 
-Von einer Verwendung von Funkgeräten, die zwar Remote Betrieb eingebaut haben, jedoch sehr teuer sind, sehen wir ab.
-Denn wer will schon mehrere hunderte Euro's im Baum weit entfernt aufhängen?
-Auch ist meist der Aufbau dieser Funkgeräte nicht outdoor tauglich.
+**Teure Funkgeräte.** Es gibt Funkgeräte mit eingebautem Remote-Betrieb, sie kosten aber mehrere hundert Euro. Wer will so ein Gerät schon im Baum weit draußen aufhängen? Dazu kommt: Der Aufbau dieser Geräte ist meist nicht outdoor-tauglich.
 
-## China "Billig"funkgeräte
+**Billige Handfunkgeräte aus China.** Sie können viel, lassen sich leicht umprogrammieren und sind als fertige Hardware verfügbar. Meist können sie aber nicht gleichzeitig Daten und Audio mit einem PC austauschen. Sie sind schwer zu steuern und ebenfalls nicht outdoor-tauglich.
 
-Günstige Hand-Funkgeräte aus China können schon sehr viel, sind einfach in der Um-Programmierung und hätten eine bereits fertige Hardware.
-Jedoch kann hier meist nicht gleichzeitig Daten sowie auch Audio mit einem PC ausgetauscht werden.
-Weiters sind die Funkgeräte sehr schwer zu steuern bzw. auch nicht wirklich outdoor tauglich.
+**Selbstbau.** Deshalb bauen wir selbst, auf Basis von FM-Modulen wie dem SA818U und SA818V. Der Aufbau ist modular, damit sich defekte Module leicht tauschen lassen. Eine Bus-Platine im hinteren Teil des Gehäuses verbindet die Platinen. Ähnliche Systeme wurden früher in 19-Zoll-Technik für komplizierte Projekte gebaut, Beispiele findest du [hier](https://merath.com/19-zoll-technik).
 
-## Selbstbau
+## Modularer Aufbau
 
-Als letzte Möglichkeit bleibt nur der Selbstbau auf Basis von FM Modulen wie das SA818U/V.
-Hier wäre ein modularer Aufbau empfehlenswert der ein leichtes austauschen der defekten Module erleichtert.
-Durch eine Bus-Platine im hinteren Bereich des Gehäuses wäre die Kommunikation der einzelnen Platinen gewährleistet.
-So ähnliche Systeme wurden früher in 19-Zoll Systeme eingebaut für komplizierter Projekte.
+Die Module haben 100 × 100 mm, die Bus-Platine ist mit ca. 117 × 100 mm etwas breiter. Das sind die vorhandenen Module:
 
-[Hier](https://merath.com/19-zoll-technik) findet man Beispiele für 19-Zoll Systeme.
+- **BusBoard**: Die Bus-Platine mit einem USB-2.0-Hub. Die Module stecken über PCN10-Steckverbinder an. Der Hub übernimmt die Kommunikation zwischen den Modulen.
+- **CM4Carrier**: Trägt das Raspberry Pi Compute Module 4 und übernimmt die High-Level-Aufgaben.
+- **PowerBoard**: Erzeugt die nötigen Spannungen. Es wird mit 12 V über einen XT60-Stecker versorgt und liefert 5 V über einen Buck-Wandler. Außerdem misst es den Strom.
+- **FMTransceiver**: Das Funkmodul mit SA818V oder SA818U und einem STM32U575. Der STM32 stellt am USB eine serielle Steuer-Schnittstelle, eine Soundkarte und einen Firmware-Update-Zugang bereit.
+- **DeviceTester**: Ein Testmodul der Plattform mit USB-C-Anschluss zu einem USB-Gerät oder PC.
 
-### Modularer Aufbau
-
-Auf einer Bus Platine ist ein USB-Hub vorgesehen, dieser übernimmt die Kommunikation zwischen den einzelnen Modulen.
-
-Das CM4 Carrier Module beherbergt ein Computer Module 4 (Raspberry Pi 4) und übernimmt die High-Level Aufgaben.
-
-Das Power Board erstellt die Notwendigen Spannungen.
-
-Das Transceivers, so wie alle weiteren Module welche Low-Level Aufgaben übernimmt, beherbergt einen STM32.
-Dieser STM32 stellt die Ein- und Ausgänge für verschiedene Aufgaben zur Verfügung.
-Das FM Module braucht zb. diese simulierten USB-Devices: UART, Soundkarte, GPIOs.
-
-Eine grobe Übersicht der einzelnen Module soll in den nächsten Seiten gegeben werden.
+Das FMTransceiver-Modul trägt einen STM32, der die Ein- und Ausgänge für seine Aufgabe bereitstellt. Die Details zu jedem Modul findest du auf den Unterseiten.
 
 ```mermaid
 flowchart TB
