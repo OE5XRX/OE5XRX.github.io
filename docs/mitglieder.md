@@ -1,5 +1,6 @@
 ---
 title: Mitglieder
+parent: Verein
 nav_order: 2
 ---
 
