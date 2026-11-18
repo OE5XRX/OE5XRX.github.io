@@ -15,6 +15,10 @@ nav_order: 99
 | 2. Kassier            | Alan Hauer (OE5LAE)                   |
 | E-Mail                | oe5bpa@gmail.com                      |
 
+# Datenschutz
+
+Informationen zur Verarbeitung personenbezogener Daten findest du in unserer [Datenschutzerklärung](datenschutz.html).
+
 # Vereinsstatuten
 
 Unsere Vereinsstatuten kannst du dir [hier](Vereinsstatuten.pdf) ansehen.
