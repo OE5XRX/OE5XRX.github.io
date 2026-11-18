@@ -5,7 +5,7 @@ nav_order: 98
 
 # Datenschutzerklärung
 
-Diese Erklärung gilt für alles, was der Verein OE5XRX mit personenbezogenen Daten macht: Mitgliederverwaltung, diese Website, die Remote-Stationen auf remote.oe5xrx.org, die Vereins-Apps mit gemeinsamem Login und die Push-Benachrichtigungen. Wir halten sie bewusst kurz und konkret.
+Diese Erklärung gilt für alles, was der Verein OE5XRX mit personenbezogenen Daten macht: Mitgliederverwaltung, diese Website, die Remote-Stationen auf remote.oe5xrx.org, die Vereins-Apps mit gemeinsamem Login und die Benachrichtigungen per E-Mail und Push. Wir halten sie bewusst kurz und konkret.
 
 ## 1. Verantwortlicher und Kontakt
 
@@ -30,12 +30,12 @@ Fragen, Auskunftswünsche oder Löschanträge schickst du formlos per E-Mail an 
 
 - **Hosting:** Die Website liegt bei GitHub Pages (GitHub Inc., USA). GitHub speichert beim Aufruf technische Daten wie deine IP-Adresse in Server-Logs, um die Seite auszuliefern und abzusichern. Darauf haben wir keinen Zugriff. Rechtsgrundlage ist unser berechtigtes Interesse an einer sicheren Website (Art. 6 Abs. 1 lit. f DSGVO).
 - **Kein Tracking:** Wir verwenden keine Analyse-Tools und keine Werbung, und wir selbst setzen keine Cookies. Die Schriften liefern wir selbst aus. Ob du das helle oder dunkle Design gewählt hast, merkt sich nur dein Browser (lokaler Speicher); das wird nicht übertragen.
-- **Diagramme:** Die Bibliothek für Diagramme (Mermaid) lädt dein Browser vom Dienst jsDelivr. Dabei sieht jsDelivr deine IP-Adresse.
-- **Termine:** Die Terminliste auf der Startseite ist ein Baustein von Vereinsplaner. Dein Browser lädt ihn direkt von Vereinsplaner; dabei sieht Vereinsplaner deine IP-Adresse.
+- **Diagramme:** Die Bibliothek für Diagramme (Mermaid) lädt dein Browser vom Dienst jsDelivr. Dabei sieht jsDelivr deine IP-Adresse. Rechtsgrundlage ist unser berechtigtes Interesse an einer funktionierenden Website (Art. 6 Abs. 1 lit. f DSGVO).
+- **Termine:** Die Terminliste auf der Startseite ist ein Baustein von Vereinsplaner. Dein Browser lädt ihn direkt von Vereinsplaner; dabei sieht Vereinsplaner deine IP-Adresse. Rechtsgrundlage ist unser berechtigtes Interesse an einer funktionierenden Website (Art. 6 Abs. 1 lit. f DSGVO).
 
 ## 4. Remote-Stationen (remote.oe5xrx.org)
 
-Für die Remote-Stationen betreiben wir eine eigene Plattform, den station-manager. Ein Konto dort legt ein Admin für Mitglieder an. Beim ersten Login bestätigst du, dass du diese Erklärung zur Kenntnis genommen hast; wir speichern dazu Version und Zeitpunkt.
+Für die Remote-Stationen betreiben wir eine eigene Plattform, den station-manager. Ein Konto dort legt ein Admin für Mitglieder an. Beim nächsten Login nach jeder neuen Version dieser Erklärung bestätigst du, dass du sie zur Kenntnis genommen hast; wir speichern dazu Version und Zeitpunkt.
 
 ### Profildaten
 
@@ -63,18 +63,20 @@ Für die Remote-Stationen betreiben wir eine eigene Plattform, den station-manag
 - **Wozu:** damit du deine aktiven Sitzungen siehst und wir Missbrauch erkennen. Rechtsgrundlage ist unser berechtigtes Interesse an der Sicherheit (Art. 6 Abs. 1 lit. f DSGVO).
 - **Wie lange:** IP-Adresse, Browser-Kennung, Land und Stadt werden nach 90 Tagen gelöscht. Der Eintrag selbst, also wer sich wann angemeldet hat, bleibt 12 Monate. Auch die IP-Adresse einer Station wird nach 90 Tagen aus dem Protokoll entfernt. Abgelaufene Sitzungen und Zugangs-Tokens räumen wir regelmäßig weg.
 
-### Push-Benachrichtigungen
+### Benachrichtigungen
 
-Push-Benachrichtigungen sind freiwillig; du schaltest sie selbst ein und jederzeit wieder ab (Art. 6 Abs. 1 lit. a DSGVO). Die Nachricht läuft über den Push-Dienst des Herstellers deines Browsers, z. B. Google, Mozilla oder Apple.
+- **E-Mail:** Wir schicken dir E-Mails mit Einladungs-, Passwort- und Bestätigungslinks und, wenn du für eine Station zuständig bist, Alarm-Meldungen zu dieser Station. Der Versand läuft über unseren E-Mail-Anbieter. Rechtsgrundlage ist die Mitgliedschaft (Art. 6 Abs. 1 lit. b DSGVO).
+- **Push:** Push-Benachrichtigungen sind freiwillig; du schaltest sie selbst ein und jederzeit wieder ab (Art. 6 Abs. 1 lit. a DSGVO). Die Nachricht läuft über den Push-Dienst des Herstellers deines Browsers, z. B. Google, Mozilla oder Apple.
 
 ### Hosting und Backups
 
 - **Server:** Hetzner Online GmbH, Rechenzentrum Nürnberg, Deutschland. Hetzner ist unser Auftragsverarbeiter.
-- **Backups:** Wir sichern die Daten verschlüsselt (restic). Der Schlüssel bleibt bei uns. Gespeichert werden die Backups bei Cloudflare R2 mit Speicherort in der EU. Wir heben sie ca. 12 Monate auf und verwenden sie nur, um nach einem Ausfall Daten wiederherzustellen. Gelöschte Daten können deshalb noch bis zu ca. 12 Monate in einem Backup stehen.
+- **Backups:** Wir sichern die Daten verschlüsselt (restic). Der Schlüssel bleibt bei uns. Gespeichert werden die Backups bei Cloudflare R2 mit Speicherort in der EU; Cloudflare ist dafür unser Auftragsverarbeiter. Wir heben sie ca. 12 Monate auf und verwenden sie nur, um nach einem Ausfall Daten wiederherzustellen. Gelöschte Daten können deshalb noch bis zu ca. 12 Monate in einem Backup stehen.
+- **Externe Bausteine:** Einige Programmbibliotheken der Oberfläche (htmx, Alpine.js, xterm.js) lädt dein Browser vom Dienst jsDelivr, die Kartenkacheln der APRS-Karte von OpenStreetMap. Dabei sehen diese Dienste deine IP-Adresse. Rechtsgrundlage ist unser berechtigtes Interesse an einer funktionierenden Oberfläche (Art. 6 Abs. 1 lit. f DSGVO).
 
 ## 5. Gemeinsamer Login für Vereins-Apps
 
-Mit deinem Konto auf remote.oe5xrx.org meldest du dich auch bei anderen Vereins-Apps an, etwa bei der Bauteil-Verwaltung (InvenTree) oder dem internen Vereins-Web. Meldest du dich dort an, gibt der station-manager an diese App weiter: dein Rufzeichen, deinen Namen, deine E-Mail-Adresse, deine Sprache und deine Gruppen (Mitgliedsstufe, Stations- und Regionszuweisungen). Die App braucht das, um dich zu erkennen und dir die passenden Rechte zu geben. Rechtsgrundlage ist die Mitgliedschaft (Art. 6 Abs. 1 lit. b DSGVO). Auch diese Logins landen im Protokoll (12 Monate, IP 90 Tage).
+Mit deinem Konto auf remote.oe5xrx.org meldest du dich auch bei anderen Vereins-Apps an, etwa bei der Bauteil-Verwaltung (InvenTree) oder dem internen Vereins-Web. Meldest du dich dort an, gibt der station-manager an diese App weiter: dein Rufzeichen, deinen Namen, deine E-Mail-Adresse, deine Sprache und deine Gruppen (Mitgliedsstufe, Stations- und Regionszuweisungen sowie weitere Vereinsgruppen). Die App braucht das, um dich zu erkennen und dir die passenden Rechte zu geben. Rechtsgrundlage ist die Mitgliedschaft (Art. 6 Abs. 1 lit. b DSGVO). Die App legt dafür ein eigenes Konto für dich an; beim Austritt wird auch dieses Konto gelöscht. Auch diese Logins landen im Protokoll (12 Monate, IP 90 Tage).
 
 ## 6. Austritt
 
@@ -83,15 +85,19 @@ Trittst du aus dem Verein aus, gilt:
 1. **Sofort:** Dein Konto wird gesperrt, alle Sitzungen werden beendet. Wir löschen dein Profil: E-Mail, Name, Adresse, Telefon, Koordinaten, Locator, Bild, Kurzbeschreibung, QRZ-Link, Push-Abos und Stations-Zuweisungen. **Nur dein Rufzeichen bleibt**, damit das Betriebsprotokoll für eine eventuelle Anfrage der Fernmeldebehörde noch zuordenbar ist.
 2. **Nach 12 Monaten:** Auch der Rest wird endgültig gelöscht. Inhalte, die du für den Verein erstellt hast, z. B. Einträge im Stations-Logbuch oder Fotos, bleiben erhalten; der Verweis auf dich wird entfernt.
 
-Läuft gerade eine Anfrage einer Behörde zu einem konkreten Fall, kann ein Admin das Löschen der betroffenen Daten anhalten, bis der Fall erledigt ist.
+Läuft gerade eine Anfrage einer Behörde zu einem konkreten Fall, wird das Löschen der betroffenen Daten angehalten, bis der Fall erledigt ist.
 
 Willst du nur eine Pause machen, können wir dein Konto auch nur **deaktivieren**. Dabei wird nichts gelöscht, und du kannst später einfach wieder einsteigen.
 
-## 7. Deine Rechte
+## 7. Anbieter außerhalb der EU
+
+GitHub, Cloudflare und die Push-Dienste von Google, Mozilla und Apple sind Unternehmen mit Sitz in den USA; auch jsDelivr arbeitet mit Rechenzentren weltweit. Dabei können Daten, vor allem deine IP-Adresse, in die USA gelangen. Wir stützen das auf den Angemessenheitsbeschluss der EU-Kommission zum EU-US Data Privacy Framework (Art. 45 DSGVO), soweit der Anbieter dort zertifiziert ist, sonst auf die Standardvertragsklauseln des Anbieters (Art. 46 DSGVO).
+
+## 8. Deine Rechte
 
 Du hast das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung deiner Daten, auf Datenübertragbarkeit und auf Widerspruch gegen Verarbeitungen, die auf unserem berechtigten Interesse beruhen. Eine Einwilligung (Push-Benachrichtigungen) kannst du jederzeit widerrufen. Schreib dazu an [info@oe5xrx.org](mailto:info@oe5xrx.org).
 
-Löschen können wir nur, was wir nicht mehr aufbewahren müssen: Das Betriebsprotokoll und die Buchhaltung bleiben bis zum Ende der oben genannten Fristen.
+Nicht sofort löschen können wir, was wir gesetzlich aufbewahren müssen (Buchhaltung, 7 Jahre) oder für den Nachweis gegenüber der Fernmeldebehörde weiter brauchen (Betriebsprotokoll, 12 Monate).
 
 Wenn du meinst, dass wir deine Daten nicht richtig verarbeiten, kannst du dich bei der Österreichischen Datenschutzbehörde beschweren: [dsb.gv.at](https://www.dsb.gv.at).
 
