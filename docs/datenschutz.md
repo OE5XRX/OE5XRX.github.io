@@ -39,8 +39,9 @@ Für die Remote-Stationen betreiben wir eine eigene Plattform, den station-manag
 
 ### Profildaten
 
-- **Was:** Rufzeichen bzw. Benutzername, Name, E-Mail-Adresse und was du freiwillig ergänzt, z. B. Adresse, Telefon, Locator, Bild, Kurzbeschreibung oder QRZ-Link.
+- **Was:** Rufzeichen bzw. Benutzername, Name, E-Mail-Adresse und was du freiwillig ergänzt, z. B. Adresse, Telefon, QTH, Locator, Bild, Kurzbeschreibung oder QRZ-Link.
 - **Wozu:** um dir Zugang zu geben und die Stationen zu verwalten. Rechtsgrundlage ist die Mitgliedschaft (Art. 6 Abs. 1 lit. b DSGVO). Ohne Benutzernamen (meist dein Rufzeichen) und E-Mail-Adresse können wir dir kein Konto anlegen.
+- **Mitgliederverzeichnis:** Andere Mitglieder sehen von dir Rufzeichen, Name, E-Mail-Adresse, Mitgliedsstufe, Bild, Kurzbeschreibung, QTH, Locator, QRZ-Link, Beitrittsjahr und deine Stations- und Regionszuweisungen. Adresse, Telefon und Koordinaten sehen nur du und die Admins. In deinem Profil kannst du die Sichtbarkeit im Verzeichnis abschalten; dann sehen andere Mitglieder nur Rufzeichen, Mitgliedsstufe und Bild.
 - **Adresse:** Gibst du eine Adresse an, schickt unser Server sie an den Dienst Nominatim von OpenStreetMap, um daraus Koordinaten und deinen Locator zu berechnen. Übermittelt wird nur die Adresse.
 - **Wie lange:** solange du Mitglied bist, siehe [Austritt](#6-austritt).
 
@@ -50,7 +51,7 @@ Für die Remote-Stationen betreiben wir eine eigene Plattform, den station-manag
 - **Wozu:** Als Funkamateure müssen wir gegenüber der Fernmeldebehörde nachweisen können, wer über eine Station gesendet hat. Das Protokoll dient außerdem der Sicherheit und der Abwehr von Missbrauch.
 - **Rechtsgrundlage:** Mitgliedschaft (Art. 6 Abs. 1 lit. b DSGVO) und unser berechtigtes Interesse an diesem Nachweis (Art. 6 Abs. 1 lit. f DSGVO). Es ist keine Einwilligung nötig; ohne Protokoll könnten wir die Stationen nicht verantwortungsvoll betreiben.
 - **Wie lange:** 12 Monate, dann wird es gelöscht. Das entspricht der Verjährungsfrist für Verwaltungsübertretungen (§ 31 VStG). Einträge ohne Personenbezug, z. B. Statusmeldungen oder Updates einer Station, bleiben als Betriebsgeschichte der Station erhalten.
-- **Wer sieht es:** Das Protokoll einer Station sehen eingeloggte Mitglieder, aber ohne IP-Adressen. IP-Adressen sehen nur Admins.
+- **Wer sieht es:** Das Protokoll einer Station sehen Mitglieder, die Stationen verwalten (Staff), und die Admins. Die IP-Adressen, mit denen sich Mitglieder verbinden, sehen nur Admins.
 
 ### Was wir nicht speichern
 
@@ -62,6 +63,10 @@ Für die Remote-Stationen betreiben wir eine eigene Plattform, den station-manag
 - **Was:** Änderungen an deinem Konto (z. B. Passwort, E-Mail-Adresse, Rechte), Anmeldungen über den gemeinsamen Login (siehe Abschnitt 5) und deine aktiven Sitzungen, jeweils mit IP-Adresse. Bei Sitzungen speichern wir zusätzlich die Browser-Kennung (User-Agent) und ermitteln aus der IP-Adresse Land und Stadt. Das macht eine Datenbank auf unserem eigenen Server; die IP-Adresse geht dafür an niemanden weiter. Für die Anmeldung setzt der station-manager ein technisch notwendiges Sitzungs-Cookie.
 - **Wozu:** damit du deine aktiven Sitzungen siehst und wir Missbrauch erkennen. Rechtsgrundlage ist unser berechtigtes Interesse an der Sicherheit (Art. 6 Abs. 1 lit. f DSGVO).
 - **Wie lange:** IP-Adresse, Browser-Kennung, Land und Stadt werden nach 90 Tagen gelöscht. Der Eintrag selbst, also wer sich wann angemeldet hat, bleibt 12 Monate. Auch die IP-Adresse einer Station wird nach 90 Tagen aus dem Protokoll entfernt. Abgelaufene Sitzungen und Zugangs-Tokens räumen wir regelmäßig weg.
+
+### APRS-Empfang
+
+Unsere Stationen empfangen APRS-Aussendungen auf Funk, auch von Funkamateuren, die nicht Mitglied sind. Eine solche Aussendung enthält Rufzeichen, oft eine Position und einen Kommentar. Wir speichern sie 30 Tage, zeigen sie im station-manager auf einer Karte und leiten sie, wie bei APRS üblich, an das öffentliche APRS-IS-Netz weiter. Rechtsgrundlage ist unser berechtigtes Interesse am Amateurfunkbetrieb (Art. 6 Abs. 1 lit. f DSGVO); die Daten wurden vom Absender selbst öffentlich ausgesendet.
 
 ### Benachrichtigungen
 
@@ -91,7 +96,7 @@ Willst du nur eine Pause machen, können wir dein Konto auch nur **deaktivieren*
 
 ## 7. Anbieter außerhalb der EU
 
-GitHub, Cloudflare und die Push-Dienste von Google, Mozilla und Apple sind Unternehmen mit Sitz in den USA; auch jsDelivr arbeitet mit Rechenzentren weltweit. Dabei können Daten, vor allem deine IP-Adresse, in die USA gelangen. Wir stützen das auf den Angemessenheitsbeschluss der EU-Kommission zum EU-US Data Privacy Framework (Art. 45 DSGVO), soweit der Anbieter dort zertifiziert ist, sonst auf die Standardvertragsklauseln des Anbieters (Art. 46 DSGVO).
+GitHub, Cloudflare und die Push-Dienste von Google, Mozilla und Apple sind Unternehmen mit Sitz in den USA; auch jsDelivr arbeitet mit Rechenzentren weltweit. Dabei können Daten, vor allem deine IP-Adresse, in die USA gelangen. Wir stützen das auf den Angemessenheitsbeschluss der EU-Kommission zum EU-US Data Privacy Framework (Art. 45 DSGVO), soweit der Anbieter dort zertifiziert ist, sonst auf die Standardvertragsklauseln des Anbieters (Art. 46 DSGVO). OpenStreetMap (Nominatim und Kartenkacheln) wird von der OpenStreetMap Foundation im Vereinigten Königreich betrieben; dafür gibt es einen Angemessenheitsbeschluss der EU-Kommission (Art. 45 DSGVO).
 
 ## 8. Deine Rechte
 
