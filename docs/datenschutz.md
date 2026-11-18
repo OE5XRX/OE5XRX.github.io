@@ -35,7 +35,7 @@ Fragen, Auskunftswünsche oder Löschanträge schickst du formlos per E-Mail an 
 
 ## 4. Remote-Stationen (remote.oe5xrx.org)
 
-Für die Remote-Stationen betreiben wir eine eigene Plattform, den station-manager. Ein Konto dort legt ein Admin für Mitglieder an. Beim nächsten Login nach jeder neuen Version dieser Erklärung bestätigst du, dass du sie zur Kenntnis genommen hast; wir speichern dazu Version und Zeitpunkt.
+Für die Remote-Stationen betreiben wir eine eigene Plattform, den station-manager. Ein Konto dort legt ein Admin für Mitglieder und Beitrittswerber an. Beim nächsten Login nach jeder neuen Version dieser Erklärung bestätigst du, dass du sie zur Kenntnis genommen hast; wir speichern dazu Version und Zeitpunkt.
 
 ### Profildaten
 
@@ -43,7 +43,7 @@ Für die Remote-Stationen betreiben wir eine eigene Plattform, den station-manag
 - **Wozu:** um dir Zugang zu geben und die Stationen zu verwalten. Rechtsgrundlage ist die Mitgliedschaft (Art. 6 Abs. 1 lit. b DSGVO). Ohne Benutzernamen (meist dein Rufzeichen) und E-Mail-Adresse können wir dir kein Konto anlegen.
 - **Mitgliederverzeichnis:** Andere Mitglieder sehen von dir Rufzeichen, Name, E-Mail-Adresse, Mitgliedsstufe, Bild, Kurzbeschreibung, QTH, Locator, QRZ-Link, Beitrittsjahr und deine Stations- und Regionszuweisungen. Adresse, Telefon und Koordinaten sehen nur du und die Admins. In deinem Profil kannst du die Sichtbarkeit im Verzeichnis abschalten; dann sehen andere Mitglieder nur Rufzeichen, Mitgliedsstufe und Bild.
 - **Adresse:** Gibst du eine Adresse an, schickt unser Server sie an den Dienst Nominatim von OpenStreetMap, um daraus Koordinaten und deinen Locator zu berechnen. Übermittelt wird nur die Adresse.
-- **Wie lange:** solange du Mitglied bist, siehe [Austritt](#6-austritt).
+- **Wie lange:** solange du Mitglied bist, siehe [Austritt](#6-austritt). Als Beitrittswerber bis zur Entscheidung über deinen Beitritt (Art. 6 Abs. 1 lit. b DSGVO, vorvertragliche Maßnahmen); wirst du nicht Mitglied, löschen wir dein Konto.
 
 ### Betriebsprotokoll
 
