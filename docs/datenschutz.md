@@ -16,7 +16,7 @@ Diese Erklärung gilt für alles, was der Verein OE5XRX mit personenbezogenen Da
 | Vertreten durch         | den Obmann (siehe [Impressum](impressum.html))      |
 | Kontakt für Datenschutz | [info@oe5xrx.org](mailto:info@oe5xrx.org)           |
 
-Fragen, Auskunftswünsche oder Löschanträge schickst du formlos per E-Mail an [info@oe5xrx.org](mailto:info@oe5xrx.org). Ein Admin erledigt das händisch.
+Fragen, Auskunftswünsche oder Löschanträge schickst du formlos per E-Mail an [info@oe5xrx.org](mailto:info@oe5xrx.org). Ein Admin erledigt das händisch. E-Mails an Adressen @oe5xrx.org nimmt Cloudflare Email Routing (Cloudflare, Inc., USA) entgegen und leitet sie an die privaten Postfächer der Admins weiter.
 
 ## 2. Mitgliederverwaltung
 
@@ -70,7 +70,7 @@ Unsere Stationen empfangen APRS-Aussendungen auf Funk, auch von Funkamateuren, d
 
 ### Benachrichtigungen
 
-- **E-Mail:** Wir schicken dir E-Mails mit Einladungs-, Passwort- und Bestätigungslinks und, wenn du für eine Station zuständig bist, Alarm-Meldungen zu dieser Station. Der Versand läuft über unseren E-Mail-Anbieter. Rechtsgrundlage ist die Mitgliedschaft (Art. 6 Abs. 1 lit. b DSGVO).
+- **E-Mail:** Der station-manager und InvenTree schicken dir E-Mails mit Einladungs-, Passwort- und Bestätigungslinks und, wenn du für eine Station zuständig bist, Alarm-Meldungen zu dieser Station. Der Versand läuft über Brevo (Sendinblue SAS, Frankreich); Brevo ist dafür unser Auftragsverarbeiter. Rechtsgrundlage ist die Mitgliedschaft (Art. 6 Abs. 1 lit. b DSGVO).
 - **Push:** Push-Benachrichtigungen sind freiwillig; du schaltest sie selbst ein und jederzeit wieder ab (Art. 6 Abs. 1 lit. a DSGVO). Die Nachricht läuft über den Push-Dienst des Herstellers deines Browsers, z. B. Google, Mozilla oder Apple.
 
 ### Hosting und Backups
@@ -96,7 +96,7 @@ Willst du nur eine Pause machen, können wir dein Konto auch nur **deaktivieren*
 
 ## 7. Anbieter außerhalb der EU
 
-GitHub, Cloudflare und die Push-Dienste von Google, Mozilla und Apple sind Unternehmen mit Sitz in den USA; auch jsDelivr arbeitet mit Rechenzentren weltweit. Dabei können Daten, vor allem deine IP-Adresse, in die USA gelangen. Wir stützen das auf den Angemessenheitsbeschluss der EU-Kommission zum EU-US Data Privacy Framework (Art. 45 DSGVO), soweit der Anbieter dort zertifiziert ist, sonst auf die Standardvertragsklauseln des Anbieters (Art. 46 DSGVO). OpenStreetMap (Nominatim und Kartenkacheln) wird von der OpenStreetMap Foundation im Vereinigten Königreich betrieben; dafür gibt es einen Angemessenheitsbeschluss der EU-Kommission (Art. 45 DSGVO).
+GitHub, Cloudflare (Backups und E-Mail-Weiterleitung) und die Push-Dienste von Google, Mozilla und Apple sind Unternehmen mit Sitz in den USA; auch jsDelivr arbeitet mit Rechenzentren weltweit. Dabei können Daten, vor allem deine IP-Adresse, in die USA gelangen. Wir stützen das auf den Angemessenheitsbeschluss der EU-Kommission zum EU-US Data Privacy Framework (Art. 45 DSGVO), soweit der Anbieter dort zertifiziert ist, sonst auf die Standardvertragsklauseln des Anbieters (Art. 46 DSGVO). OpenStreetMap (Nominatim und Kartenkacheln) wird von der OpenStreetMap Foundation im Vereinigten Königreich betrieben; dafür gibt es einen Angemessenheitsbeschluss der EU-Kommission (Art. 45 DSGVO).
 
 ## 8. Deine Rechte
 
