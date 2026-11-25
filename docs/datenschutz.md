@@ -55,7 +55,7 @@ Für die Remote-Stationen betreiben wir eine eigene Plattform, den station-manag
 
 ### Was wir nicht speichern
 
-- **Audio:** Was du hörst oder sendest, wird nicht aufgezeichnet.
+- **Audio:** Was du hörst oder sendest, wird nicht aufgezeichnet. Von SSTV speichern wir nur die dekodierten Bilder und für eine Sendung kurz die daraus erzeugte Audiodatei (siehe unten).
 - **Terminal-Inhalte:** Von einer Terminal-Sitzung speichern wir nur, wer sie wann geöffnet hat, nicht was darin eingegeben oder angezeigt wurde.
 
 ### Logins und Sitzungen
@@ -74,7 +74,7 @@ Unsere Stationen empfangen APRS-Aussendungen auf Funk, auch von Funkamateuren, d
 - **Wozu:** um die Bilder im station-manager in einer Galerie zu zeigen. Rechtsgrundlage ist die Mitgliedschaft (Art. 6 Abs. 1 lit. b DSGVO) und unser berechtigtes Interesse am Amateurfunkbetrieb (Art. 6 Abs. 1 lit. f DSGVO); empfangene Bilder wurden vom Absender selbst öffentlich ausgesendet.
 - **Gesendet ist öffentlich:** Was du per SSTV sendest, kann jeder mit einem passenden Empfänger mitempfangen. Sende nur Bilder, die öffentlich sein dürfen.
 - **Wer sieht es:** Mitglieder und Beitrittswerber, die die Station im station-manager sehen. Deine eigenen gesendeten Bilder kannst du selbst löschen; Mitglieder, die Stationen verwalten (Staff), und die Admins können alle Bilder einer Station löschen.
-- **Wie lange:** 90 Tage, dann werden Bild und Angaben automatisch gelöscht. Die Frist können die Admins anpassen. Ein Foto, das du für eine Sendung hochlädst, aber nicht sendest, halten wir höchstens 1 Stunde für die Vorschau vor und löschen es dann.
+- **Wie lange:** 90 Tage, dann werden Bild und Angaben automatisch gelöscht. Die Frist können die Admins anpassen. Ein Foto, das du für eine Sendung hochlädst, aber nicht sendest, halten wir höchstens 1 Stunde für die Vorschau vor und löschen es dann. Für eine SSTV-Sendung erzeugen wir aus dem Bild kurz eine Audiodatei, die die Station herunterlädt; sie wird nach der Sendung oder einem Abbruch gelöscht, spätestens nach 2 Stunden.
 
 ### Benachrichtigungen
 
