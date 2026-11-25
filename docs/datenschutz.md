@@ -68,6 +68,14 @@ Für die Remote-Stationen betreiben wir eine eigene Plattform, den station-manag
 
 Unsere Stationen empfangen APRS-Aussendungen auf Funk, auch von Funkamateuren, die nicht Mitglied sind. Eine solche Aussendung enthält Rufzeichen, oft eine Position und einen Kommentar. Wir speichern sie 30 Tage, zeigen sie im station-manager auf einer Karte und leiten sie, wie bei APRS üblich, an das öffentliche APRS-IS-Netz weiter. Rechtsgrundlage ist unser berechtigtes Interesse am Amateurfunkbetrieb (Art. 6 Abs. 1 lit. f DSGVO); die Daten wurden vom Absender selbst öffentlich ausgesendet.
 
+### SSTV-Bilder
+
+- **Was:** Bilder, die eine Station per SSTV empfangen oder gesendet hat, jeweils mit Station, Frequenz, Mode und Zeitpunkt. Bei empfangenen Bildern speichern wir, wer den Empfang gestartet hat, bei gesendeten das Rufzeichen dessen, der gesendet hat. Ein Bild kann selbst Rufzeichen enthalten, die der Absender eingeblendet hat, auch von Funkamateuren, die nicht Mitglied sind.
+- **Wozu:** um die Bilder im station-manager in einer Galerie zu zeigen. Rechtsgrundlage ist die Mitgliedschaft (Art. 6 Abs. 1 lit. b DSGVO) und unser berechtigtes Interesse am Amateurfunkbetrieb (Art. 6 Abs. 1 lit. f DSGVO); empfangene Bilder wurden vom Absender selbst öffentlich ausgesendet.
+- **Gesendet ist öffentlich:** Was du per SSTV sendest, kann jeder mit einem passenden Empfänger mitempfangen. Sende nur Bilder, die öffentlich sein dürfen.
+- **Wer sieht es:** Mitglieder und Beitrittswerber, die die Station im station-manager sehen. Deine eigenen gesendeten Bilder kannst du selbst löschen; Mitglieder, die Stationen verwalten (Staff), und die Admins können alle Bilder einer Station löschen.
+- **Wie lange:** 90 Tage, dann werden Bild und Angaben automatisch gelöscht. Die Frist können die Admins anpassen. Ein Foto, das du für eine Sendung hochlädst, aber nicht sendest, halten wir höchstens 1 Stunde für die Vorschau vor und löschen es dann.
+
 ### Benachrichtigungen
 
 - **E-Mail:** Der station-manager und InvenTree schicken dir E-Mails mit Einladungs-, Passwort- und Bestätigungslinks und, wenn du für eine Station zuständig bist, Alarm-Meldungen zu dieser Station. Der Versand läuft über Brevo (Sendinblue SAS, Frankreich); Brevo ist dafür unser Auftragsverarbeiter. Rechtsgrundlage ist die Mitgliedschaft (Art. 6 Abs. 1 lit. b DSGVO).
@@ -110,4 +118,4 @@ Wir treffen keine automatisierten Entscheidungen über dich und erstellen keine 
 
 ---
 
-Version 1, gültig ab 20. November 2026.
+Version 2, gültig ab 26. November 2026.
